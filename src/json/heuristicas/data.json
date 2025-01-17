@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Visibilidade do status do sistema",
+    "content": "O sistema deve sempre manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado em tempo razoável.",
+    "num": 1
+  },
+  {
+    "name": "Correspondência entre o sistema e o mundo real",
+    "content": "O sistema deve falar a linguagem dos usuários, com palavras, frases e conceitos familiares, em vez de termos técnicos. Siga convenções do mundo real, fazendo as informações aparecerem em uma ordem natural e lógica.",
+    "num": 2
+  },
+  {
+    "name": "Controle e liberdade do usuário",
+    "content": "Os usuários frequentemente escolhem funções por engano e precisam de uma 'saída de emergência' claramente identificada para sair do estado indesejado sem ter que passar por um processo extenso.",
+    "num": 3
+  },
+  {
+    "name": "Consistência e padrões",
+    "content": "Os usuários não devem se perguntar se diferentes palavras, situações ou ações significam a mesma coisa. Siga convenções da plataforma.",
+    "num": 4
+  },
+  {
+    "name": "Prevenção de erros",
+    "content": "Melhor do que boas mensagens de erro é um design cuidadoso que previne a ocorrência de problemas em primeiro lugar.",
+    "num": 5
+  },
+  {
+    "name": "Reconhecimento em vez de recordação",
+    "content": "Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. O usuário não deve ter que lembrar informações de uma parte do sistema para outra.",
+    "num": 6
+  },
+  {
+    "name": "Flexibilidade e eficiência de uso",
+    "content": "Acelere a interação para usuários experientes com a possibilidade de atalhos que permitam ignorar etapas para ações frequentes.",
+    "num": 7
+  },
+  {
+    "name": "Estética e design minimalista",
+    "content": "As interfaces não devem conter informações irrelevantes ou raramente necessárias. Cada unidade extra de informação em uma interface compete com as unidades relevantes e diminui sua visibilidade.",
+    "num": 8
+  },
+  {
+    "name": "Ajudar os usuários a reconhecer, diagnosticar e corrigir erros",
+    "content": "As mensagens de erro devem ser expressas em linguagem simples, indicar o problema com precisão e sugerir uma solução.",
+    "num": 9
+  },
+  {
+    "name": "Ajuda e documentação",
+    "content": "Mesmo que seja melhor se o sistema puder ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Essas informações devem ser fáceis de buscar, focadas na tarefa do usuário, listar etapas concretas e não ser muito extensa.",
+    "num": 10
+  }
+]
