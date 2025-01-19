@@ -1,8 +1,10 @@
 import IntegrantesCard from "../../components/integrantes-card/IntegrantesCard";
 import integrantes_data from "../../json/integrantes/data.json";
 import chars from "../../assets/char/—Pngtree—we are hiring character illustration_6680830.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col gap-5">
       <div className="w-full sm:w-full flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-primary-500 p-6 text-white">
@@ -30,9 +32,19 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn">WCAG</button>
+            <button onClick={() => navigate("/wcag")} className="btn">
+              WCAG
+            </button>
             <button className="btn">ABNT</button>
-            <button className="btn">Heurísticas de Nielsen</button>
+            <button onClick={() => navigate("/heuristicas")} className="btn">
+              Heurísticas de Nielsen
+            </button>
+            <button
+              onClick={() => navigate("/acessibilidade-digital")}
+              className="btn"
+            >
+              Guia de Boas Práticas para Acessibilidade Digital
+            </button>
           </div>
         </div>
 

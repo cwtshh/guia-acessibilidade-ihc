@@ -68,10 +68,20 @@ const NavBar = () => {
       {/* Desktop Menu */}
       <div className="hidden lg:flex flex-none">
         <ul className="menu menu-horizontal px-1 space-x-4">
-          <li className={`${location.pathname === "/" ? "active" : ""}`}>
+          <li
+            className={`${
+              location.pathname === "/wcag"
+                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
+            }`}
+          >
             <Link
-              to={"/"}
-              className="transition-colors duration-300 hover:text-primary-600"
+              to={"/wcag"}
+              className={`${
+                location.pathname === "/wcag"
+                  ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                  : "transition-all duration-300 ease-in-out"
+              }`}
             >
               WCAG
             </Link>
@@ -85,7 +95,7 @@ const NavBar = () => {
             className={`${
               location.pathname === "/heuristicas"
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
-                : "hover:bg-primary-200 transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
             }`}
           >
             <Link
@@ -93,6 +103,18 @@ const NavBar = () => {
               className="transition-colors duration-300 hover:text-primary-600"
             >
               Heurísticas de Nielsen
+            </Link>
+          </li>
+
+          <li
+            className={`${
+              location.pathname === "/acessibilidade-digital"
+                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
+            }`}
+          >
+            <Link to={"/acessibilidade-digital"}>
+              Guia de Boas Práticas para Acessibilidade Digital
             </Link>
           </li>
         </ul>
@@ -156,7 +178,7 @@ const NavBar = () => {
                 className={`${
                   location.pathname === "/heuristicas"
                     ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
-                    : "hover:bg-primary-200 transition-all duration-300 ease-in-out"
+                    : "transition-all duration-300 ease-in-out"
                 }`}
               >
                 <Link
