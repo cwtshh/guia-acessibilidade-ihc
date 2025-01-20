@@ -121,7 +121,7 @@ const Wcag = () => {
       <div className="flex flex-col gap-4 mt-8 p-6">
         <h1 className="font-bold text-xl">Diretrizes</h1>
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
           {/* Campo de pesquisa */}
           <label className="input flex items-center gap-2 p-2 bg-white rounded-full shadow-sm grow">
             <input
@@ -134,7 +134,7 @@ const Wcag = () => {
           </label>
 
           {/* Select para Nível de Conformidade */}
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control w-full md:w-auto max-w-xs">
             <select
               className="select select-bordered"
               onChange={(e) => setNivelConformidade(e.target.value || null)} // Atualiza o filtro de nível
