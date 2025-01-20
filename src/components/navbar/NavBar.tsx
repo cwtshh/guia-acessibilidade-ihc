@@ -30,6 +30,14 @@ const NavBar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const NomePaginaMap: { [key: string]: string } = {
+    "/": "Guia de Acessibilidade - IHC",
+    "/wcag": "WCAG",
+    "/abnt": "ABNT",
+    "/heuristicas": "Heurísticas de Nielsen",
+    "/acessibilidade-digital": "Acessibilidade Digital",
+  };
+
   return (
     <div className="navbar h-20 bg-base-100 shadow-md sticky top-0 z-50">
       <div className="flex-1">
@@ -37,7 +45,10 @@ const NavBar = () => {
           to={"/"}
           className="btn btn-ghost text-xl font-semibold text-gray-800"
         >
-          Guia de Acessibilidade - IHC
+          <span className="hidden sm:block">Guia de Acessibilidade - IHC</span>
+          <span className="block sm:hidden">
+            {NomePaginaMap[location.pathname as keyof typeof NomePaginaMap]}
+          </span>
         </Link>
       </div>
 
@@ -160,9 +171,18 @@ const NavBar = () => {
               </button>
             </div>
             <ul className="menu space-y-4">
-              <li className={`${location.pathname === "/" ? "active" : ""}`}>
+              <li>
                 <Link
                   to={"/"}
+                  onClick={closeMenu}
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
+                >
+                  Voltar ao início
+                </Link>
+              </li>
+              <li className={`${location.pathname === "/" ? "active" : ""}`}>
+                <Link
+                  to={"/wcag"}
                   onClick={closeMenu}
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
