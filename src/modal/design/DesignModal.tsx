@@ -30,7 +30,7 @@ const DesignModal = () => {
               <h3 className="font-bold text-xl">Design</h3>
               <audio
                 ref={audioRef}
-                src="src/text-to-speech/acessibilidade-digital/design/design.mp3"
+                src="src/assets/text-to-speech/acessibilidade-digital/design/design.mp3"
               />
               <div className="tooltip" data-tip="Texto Para Fala">
                 <button

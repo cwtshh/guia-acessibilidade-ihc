@@ -105,7 +105,10 @@ const Wcag = () => {
         </ul>
 
         <div>
-          <audio ref={audioref} src="src/text-to-speech/wcag/wcag_desc.mp3" />
+          <audio
+            ref={audioref}
+            src="src/assets/text-to-speech/wcag/wcag_desc.mp3"
+          />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
               onClick={togglePlay}

@@ -29,7 +29,7 @@ const GestaoProjetosModal = () => {
               <h3 className="font-bold text-xl">Gestão de Projetos</h3>
               <audio
                 ref={audioRef}
-                src="src/text-to-speech/acessibilidade-digital/gestao-projetos/gestao-projetos.mp3"
+                src="src/assets/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
               />
               <div className="tooltip" data-tip="Texto Para Fala">
                 <button

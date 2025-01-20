@@ -118,7 +118,7 @@ const AcessibilidadeDigital = () => {
         <div>
           <audio
             ref={audioRef}
-            src="src/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
+            src="src/assets/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
           />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button

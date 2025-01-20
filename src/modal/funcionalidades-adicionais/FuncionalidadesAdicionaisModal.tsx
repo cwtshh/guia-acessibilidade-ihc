@@ -29,7 +29,7 @@ const FuncionalidadesAdicionaisModal = () => {
               <h3 className="font-bold text-xl">Funcionalidades Adicionais</h3>
               <audio
                 ref={audioRef}
-                src="src/text-to-speech/acessibilidade-digital/funcionalidades-adicionais/funcionalidades-adicionais.mp3"
+                src="src/assets/text-to-speech/acessibilidade-digital/conteudo/conteudo.mp3"
               />
               <div className="tooltip" data-tip="Texto Para Fala">
                 <button

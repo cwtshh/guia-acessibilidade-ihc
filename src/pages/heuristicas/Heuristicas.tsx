@@ -84,7 +84,7 @@ const Heuristicas = () => {
         <div>
           <audio
             ref={audioRef1}
-            src="src/text-to-speech/heuristicas/descricao.mp3"
+            src="src/assets/text-to-speech/heuristicas/descricao.mp3"
           />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
@@ -104,7 +104,7 @@ const Heuristicas = () => {
           </h1>
           <audio
             ref={audioRef2}
-            src="src/text-to-speech/heuristicas/heuristicas.mp3"
+            src="src/assets/text-to-speech/heuristicas/heuristicas.mp3"
           />
           <button
             onClick={togglePlayHeur}
