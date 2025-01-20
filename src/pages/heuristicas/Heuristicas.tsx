@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import heuristicas_data from "../../json/heuristicas/data.json";
 import HeuristicaCard from "../../components/heuristica-card/HeuristicaCard";

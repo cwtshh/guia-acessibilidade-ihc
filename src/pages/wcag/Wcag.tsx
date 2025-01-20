@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import diretrizes_data from "../../json/wcag/topicos_2.json";
 import WcagCard from "../../components/wgac-card/WcagCard";

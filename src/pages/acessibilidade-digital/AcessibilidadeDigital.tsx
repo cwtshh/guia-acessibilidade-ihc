@@ -1,4 +1,3 @@
-import React from "react";
 import acessbilidade from "../../assets/acessibilidade/image.png";
 
 const AcessibilidadeDigital = () => {
