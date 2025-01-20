@@ -2,12 +2,16 @@ import IntegrantesCard from "../../components/integrantes-card/IntegrantesCard";
 import integrantes_data from "../../json/integrantes/data.json";
 import chars from "../../assets/char/—Pngtree—we are hiring character illustration_6680830.png";
 import { useNavigate } from "react-router-dom";
+import bg from "../../assets/bg/gradient_2.jpg";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col gap-5">
-      <div className="w-full sm:w-full flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-primary-500 p-6 text-white">
+      <div
+        className="w-full sm:w-full flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 text-white"
+        style={{ backgroundImage: `url(${bg})` }}
+      >
         <div className="w-full sm:w-2/3 flex flex-col gap-6">
           <h1 className="font-bold text-xl sm:text-2xl">
             Seja bem-vindo ao Guia de Acessibilidade do Grupo 9!
@@ -35,7 +39,9 @@ const Home = () => {
             <button onClick={() => navigate("/wcag")} className="btn">
               WCAG
             </button>
-            <button className="btn">ABNT</button>
+            <button onClick={() => navigate("/abnt")} className="btn">
+              ABNT
+            </button>
             <button onClick={() => navigate("/heuristicas")} className="btn">
               Heurísticas de Nielsen
             </button>
