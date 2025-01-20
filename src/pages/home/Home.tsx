@@ -65,7 +65,7 @@ const Home = () => {
 
       <div className="p-6">
         <h1 className="font-bold text-xl sm:text-2xl mb-4">Integrantes:</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {integrantes_data.map((integrante, index: number) => {
             return <IntegrantesCard key={index} integrante={integrante} />;
           })}
