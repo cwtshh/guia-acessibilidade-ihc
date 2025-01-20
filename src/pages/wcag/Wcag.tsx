@@ -4,6 +4,7 @@ import diretrizes_data from "../../json/wcag/topicos_2.json";
 import WcagCard from "../../components/wgac-card/WcagCard";
 import bg from "../../assets/bg/gradient_2.jpg";
 import { LuSpeech } from "react-icons/lu";
+import wcag_desc from "../../assets/text-to-speech/wcag/wcag_desc.mp3";
 interface Diretrizes {
   titulo: string;
   conteudo: string;
@@ -105,10 +106,7 @@ const Wcag = () => {
         </ul>
 
         <div>
-          <audio
-            ref={audioref}
-            src="src/assets/text-to-speech/wcag/wcag_desc.mp3"
-          />
+          <audio ref={audioref} src={wcag_desc} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
               onClick={togglePlay}

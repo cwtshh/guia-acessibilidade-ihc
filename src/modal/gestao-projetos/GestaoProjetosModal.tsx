@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { LuSpeech } from "react-icons/lu";
+import gestao_aud from "../../assets/text-to-speech/acessibilidade-digital/gestao-projetos/gestao-projetos.mp3";
 
 const GestaoProjetosModal = () => {
   const [isPlaying, setIsPLaying] = useState<boolean>(false);
@@ -27,10 +28,7 @@ const GestaoProjetosModal = () => {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-5">
               <h3 className="font-bold text-xl">Gestão de Projetos</h3>
-              <audio
-                ref={audioRef}
-                src="src/assets/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
-              />
+              <audio ref={audioRef} src={gestao_aud} />
               <div className="tooltip" data-tip="Texto Para Fala">
                 <button
                   onClick={togglePlay}

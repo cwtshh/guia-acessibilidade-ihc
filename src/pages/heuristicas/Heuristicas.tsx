@@ -4,7 +4,8 @@ import heuristicas_data from "../../json/heuristicas/data.json";
 import HeuristicaCard from "../../components/heuristica-card/HeuristicaCard";
 import bg from "../../assets/bg/gradient_2.jpg";
 import { LuSpeech } from "react-icons/lu";
-
+import heuristica_desc from "../../assets/text-to-speech/heuristicas/descricao.mp3";
+import heusristicas_all from "../../assets/text-to-speech/heuristicas/heuristicas.mp3";
 interface Heuristica {
   name: string;
   content: string;
@@ -82,10 +83,7 @@ const Heuristicas = () => {
           que promovem uma experiência do usuário mais intuitiva e eficiente.
         </p>
         <div>
-          <audio
-            ref={audioRef1}
-            src="src/assets/text-to-speech/heuristicas/descricao.mp3"
-          />
+          <audio ref={audioRef1} src={heuristica_desc} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
               onClick={togglePlayDescricao}
@@ -102,10 +100,7 @@ const Heuristicas = () => {
           <h1 className="font-bold text-xl md:text-2xl">
             As 10 Heurísticas de Nielsen
           </h1>
-          <audio
-            ref={audioRef2}
-            src="src/assets/text-to-speech/heuristicas/heuristicas.mp3"
-          />
+          <audio ref={audioRef2} src={heusristicas_all} />
           <button
             onClick={togglePlayHeur}
             className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"

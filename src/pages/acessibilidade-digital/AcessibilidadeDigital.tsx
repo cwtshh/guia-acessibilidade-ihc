@@ -8,6 +8,7 @@ import FuncionalidadesAdicionaisModal from "../../modal/funcionalidades-adiciona
 import GestaoProjetosModal from "../../modal/gestao-projetos/GestaoProjetosModal";
 import TestesModal from "../../modal/testes/TestesModal";
 import { useRef, useState } from "react";
+import acessibilidade_dsc from "../../assets/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3";
 
 const AcessibilidadeDigital = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -116,10 +117,7 @@ const AcessibilidadeDigital = () => {
           </li>
         </ul>
         <div>
-          <audio
-            ref={audioRef}
-            src="src/assets/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
-          />
+          <audio ref={audioRef} src={acessibilidade_dsc} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
               onClick={togglePlay}
@@ -131,7 +129,7 @@ const AcessibilidadeDigital = () => {
         </div>
       </div>
 
-      <div className="px-6 pb-6 flex flex-col gap-4">
+      <div className="p-6 flex flex-col gap-4">
         <h1 className="font-bold text-xl">
           Checklist para Boas Práticas de Acessibilidade Digital
         </h1>
