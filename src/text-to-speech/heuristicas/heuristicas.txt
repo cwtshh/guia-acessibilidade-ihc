@@ -1,0 +1,19 @@
+Visibilidade do status do sistema: O sistema deve sempre manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado em tempo razoável.
+
+Correspondência entre o sistema e o mundo real: O sistema deve falar a linguagem dos usuários, com palavras, frases e conceitos familiares, em vez de termos técnicos. Siga convenções do mundo real, fazendo as informações aparecerem em uma ordem natural e lógica.
+
+Controle e liberdade do usuário: Os usuários frequentemente escolhem funções por engano e precisam de uma 'saída de emergência' claramente identificada para sair do estado indesejado sem ter que passar por um processo extenso.
+
+Consistência e padrões: Os usuários não devem se perguntar se diferentes palavras, situações ou ações significam a mesma coisa. Siga convenções da plataforma.
+
+Prevenção de erros: Melhor do que boas mensagens de erro é um design cuidadoso que previne a ocorrência de problemas em primeiro lugar.
+
+Reconhecimento em vez de recordação: Minimize a carga de memória do usuário tornando objetos, ações e opções visíveis. O usuário não deve ter que lembrar informações de uma parte do sistema para outra.
+
+Flexibilidade e eficiência de uso: Acelere a interação para usuários experientes com a possibilidade de atalhos que permitam ignorar etapas para ações frequentes.
+
+Estética e design minimalista: As interfaces não devem conter informações irrelevantes ou raramente necessárias. Cada unidade extra de informação em uma interface compete com as unidades relevantes e diminui sua visibilidade.
+
+Ajudar os usuários a reconhecer, diagnosticar e corrigir erros: As mensagens de erro devem ser expressas em linguagem simples, indicar o problema com precisão e sugerir uma solução.
+
+Ajuda e documentação: Mesmo que seja melhor se o sistema puder ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Essas informações devem ser fáceis de buscar, focadas na tarefa do usuário, listar etapas concretas e não ser muito extensa.

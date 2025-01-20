@@ -1,4 +1,20 @@
+import { useRef, useState } from "react";
+import { LuSpeech } from "react-icons/lu";
+
 const DesignModal = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
   return (
     <div>
       <dialog id="design" className="modal">
@@ -10,7 +26,22 @@ const DesignModal = () => {
             </button>
           </form>
           <div className="flex flex-col gap-4">
-            <h3 className="font-bold text-xl">Design</h3>
+            <div className="flex items-center gap-5">
+              <h3 className="font-bold text-xl">Design</h3>
+              <audio
+                ref={audioRef}
+                src="src/text-to-speech/acessibilidade-digital/design/design.mp3"
+              />
+              <div className="tooltip" data-tip="Texto Para Fala">
+                <button
+                  onClick={togglePlay}
+                  className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+                >
+                  <LuSpeech className="text-2xl" />
+                </button>
+              </div>
+            </div>
+
             <ul className="list-disc list-inside flex flex-col gap-2">
               <li>
                 Utilize <strong>contrastes adequados</strong> para fundo e texto

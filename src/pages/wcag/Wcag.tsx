@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import diretrizes_data from "../../json/wcag/topicos_2.json";
 import WcagCard from "../../components/wgac-card/WcagCard";
 import bg from "../../assets/bg/gradient_2.jpg";
+import { LuSpeech } from "react-icons/lu";
 interface Diretrizes {
   titulo: string;
   conteudo: string;
@@ -17,7 +18,18 @@ const Wcag = () => {
   );
   const [nivelConformidade, setNivelConformidade] = useState<string | null>(
     null
-  ); // Estado para o nível de conformidade
+  );
+  const [isPLoading, setIsPLoading] = useState<boolean>(true);
+  const audioref = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPLoading) {
+      audioref.current?.pause();
+    } else {
+      audioref.current?.play();
+    }
+    setIsPLoading(!isPLoading);
+  };
 
   useEffect(() => {
     setDiretrizes(diretrizes_data);
@@ -91,6 +103,18 @@ const Wcag = () => {
             aplicáveis a todos os tipos de conteúdo.
           </li>
         </ul>
+
+        <div>
+          <audio ref={audioref} src="src/text-to-speech/wcag/wcag_desc.mp3" />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col gap-4 mt-8 p-6">

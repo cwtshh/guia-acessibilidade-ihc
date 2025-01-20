@@ -1,3 +1,4 @@
+import { LuSpeech } from "react-icons/lu";
 import acessbilidade from "../../assets/acessibilidade/image.png";
 import bg from "../../assets/bg/gradient_2.jpg";
 import ConteudoModal from "../../modal/conteudo/Conteudo";
@@ -6,8 +7,21 @@ import DesignModal from "../../modal/design/DesignModal";
 import FuncionalidadesAdicionaisModal from "../../modal/funcionalidades-adicionais/FuncionalidadesAdicionaisModal";
 import GestaoProjetosModal from "../../modal/gestao-projetos/GestaoProjetosModal";
 import TestesModal from "../../modal/testes/TestesModal";
+import { useRef, useState } from "react";
 
 const AcessibilidadeDigital = () => {
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div>
       <div
@@ -46,7 +60,7 @@ const AcessibilidadeDigital = () => {
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col gap-4">
         <h1 className="font-bold text-xl">Pontos Principais</h1>
 
         <ul className="list-decimal list-inside flex flex-col gap-4">
@@ -101,9 +115,23 @@ const AcessibilidadeDigital = () => {
             acessibilidade digital.
           </li>
         </ul>
+        <div>
+          <audio
+            ref={audioRef}
+            src="src/text-to-speech/acessibilidade-digital/acessibilidade-digital.mp3"
+          />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div className="p-6 flex flex-col gap-4">
+      <div className="px-6 pb-6 flex flex-col gap-4">
         <h1 className="font-bold text-xl">
           Checklist para Boas Práticas de Acessibilidade Digital
         </h1>
