@@ -64,7 +64,7 @@ const Heuristicas = () => {
           As 10 Heurísticas de Nielsen
         </h1>
 
-        <label className="input input-bordered flex items-center gap-2 p-2 bg-white rounded-md shadow-sm">
+        <label className="input input-bordered flex items-center gap-2 p-2 bg-white rounded-full shadow-sm">
           <input
             onChange={(e) => setSearchTerm(e.target.value)}
             type="text"

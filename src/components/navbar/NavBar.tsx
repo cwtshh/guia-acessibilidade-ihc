@@ -87,9 +87,12 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <a className="transition-colors duration-300 hover:text-primary-600">
+            <Link
+              to={"/abnt"}
+              className="transition-colors duration-300 hover:text-primary-600"
+            >
               ABNT
-            </a>
+            </Link>
           </li>
           <li
             className={`${
@@ -167,12 +170,13 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
+                  to={"/abnt"}
                   onClick={closeMenu}
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
                   ABNT
-                </a>
+                </Link>
               </li>
               <li
                 className={`${
@@ -187,6 +191,16 @@ const NavBar = () => {
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
                   Heurísticas de Nielsen
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to={"/acessibilidade-digital"}
+                  onClick={closeMenu}
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
+                >
+                  Guia de Boas Práticas para Acessibilidade Digital
                 </Link>
               </li>
             </ul>

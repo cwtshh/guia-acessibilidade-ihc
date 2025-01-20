@@ -5,6 +5,7 @@ import Heuristicas from "./pages/heuristicas/Heuristicas";
 import JornadaUsuario from "./pages/jornada-usuario/JornadaUsuario/JornadaUsuario";
 import AcessibilidadeDigital from "./pages/acessibilidade-digital/AcessibilidadeDigital";
 import Wcag from "./pages/wcag/Wcag";
+import Abnt from "./pages/abnt/Abnt";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           element={<AcessibilidadeDigital />}
         />
         <Route path="/wcag" element={<Wcag />} />
+        <Route path="/abnt" element={<Abnt />} />
       </Routes>
     </div>
   );
