@@ -36,10 +36,16 @@ const NavBar = () => {
     "/abnt": "ABNT",
     "/heuristicas": "Heurísticas de Nielsen",
     "/acessibilidade-digital": "Acessibilidade Digital",
+    "/abnt/tabela/c1": "Tabela C.1 - Interação por teclado",
+    "/abnt/tabela/c2": "Tabela C.2 - Imagens",
+    "/abnt/tabela/c3": "Tabela C.3 - Cabeçalhos",
+    "/abnt/tabela/c4": "Tabela C.4 - Regiões",
+    "/abnt/tabela/c5": "Tabela C.5 - Listas",
+    "/abnt/tabela/c6": "Tabela C.6 - Tabelas",
   };
 
   return (
-    <div className="navbar h-20 bg-base-100 shadow-md sticky top-0 z-50">
+    <div className="navbar h-20 min-h-[80px] bg-base-100 shadow-md sticky top-0 z-50">
       <div className="flex-1">
         <Link
           to={"/"}
@@ -97,7 +103,13 @@ const NavBar = () => {
               WCAG
             </Link>
           </li>
-          <li>
+          <li
+            className={`${
+              location.pathname === "/abnt"
+                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
+            }`}
+          >
             <Link
               to={"/abnt"}
               className="transition-colors duration-300 hover:text-primary-600"
@@ -189,7 +201,13 @@ const NavBar = () => {
                   WCAG
                 </Link>
               </li>
-              <li>
+              <li
+                className={`${
+                  location.pathname === "/abnt"
+                    ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                    : "transition-all duration-300 ease-in-out"
+                }`}
+              >
                 <Link
                   to={"/abnt"}
                   onClick={closeMenu}
