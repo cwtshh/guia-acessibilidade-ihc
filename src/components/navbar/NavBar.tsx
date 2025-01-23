@@ -84,7 +84,7 @@ const NavBar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex flex-none">
-        <ul className="menu menu-horizontal px-1 space-x-4">
+        <ul className="menu menu-horizontal px-1 space-x-4 text-base">
           <li
             className={`${
               location.pathname === "/wcag"
@@ -92,20 +92,12 @@ const NavBar = () => {
                 : "transition-all duration-300 ease-in-out"
             }`}
           >
-            <Link
-              to={"/wcag"}
-              className={`${
-                location.pathname === "/wcag"
-                  ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
-                  : "transition-all duration-300 ease-in-out"
-              }`}
-            >
-              WCAG
-            </Link>
+            <Link to={"/wcag"}>WCAG</Link>
           </li>
+
           <li
             className={`${
-              location.pathname === "/abnt"
+              location.pathname.includes("/abnt")
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                 : "transition-all duration-300 ease-in-out"
             }`}

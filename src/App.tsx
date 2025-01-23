@@ -13,10 +13,15 @@ import TabelaC3 from "./pages/abnt/tabela-c3/TabelaC3";
 import TabelaC4 from "./pages/abnt/tabela-c4/TabelaC4";
 import Tabelac5 from "./pages/abnt/tabela-c5/Tabelac5";
 import TabelaC6 from "./pages/abnt/tabela-c6/TabelaC6";
+import TabelaC7 from "./pages/abnt/tabela-c7/TabelaC7";
+import TabelaC8 from "./pages/abnt/tabela-c8/TabelaC8";
+import TabelaC9 from "./pages/abnt/tabela-c9/TabelaC9";
+import Tabelac10 from "./pages/abnt/tabela-c10/Tabelac10";
+import TabelaC11 from "./pages/abnt/tabela-c11/TabelaC11";
 
 function App() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col text-black">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,6 +39,11 @@ function App() {
         <Route path="/abnt/tabela/c4" element={<TabelaC4 />} />
         <Route path="/abnt/tabela/c5" element={<Tabelac5 />} />
         <Route path="/abnt/tabela/c6" element={<TabelaC6 />} />
+        <Route path="/abnt/tabela/c7" element={<TabelaC7 />} />
+        <Route path="/abnt/tabela/c8" element={<TabelaC8 />} />
+        <Route path="/abnt/tabela/c9" element={<TabelaC9 />} />
+        <Route path="abnt/tabela/c10" element={<Tabelac10 />} />
+        <Route path="/abnt/tabela/c11" element={<TabelaC11 />} />
         <Route path="/fontes" element={<Fontes />} />
       </Routes>
     </div>

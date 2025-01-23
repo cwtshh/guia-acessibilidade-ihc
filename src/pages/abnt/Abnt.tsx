@@ -1,9 +1,45 @@
 import bg from "../../assets/bg/gradient_2.jpg";
 import abnt_gb from "../../assets/abnt/image.png";
 import { useNavigate } from "react-router-dom";
+import { useRef, useState } from "react";
+import { LuSpeech } from "react-icons/lu";
+import introducao from "../../assets/text-to-speech/abnt/introducao.mp3";
+import aplicacoes from "../../assets/text-to-speech/abnt/aplicacoes.mp3";
+import checklist from "../../assets/text-to-speech/abnt/checklist.mp3";
 
 const Abnt = () => {
   const navigate = useNavigate();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioRef2 = useRef<HTMLAudioElement>(null);
+  const audioRef3 = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const togglePlay2 = () => {
+    if (isPlaying) {
+      audioRef2.current?.pause();
+    } else {
+      audioRef2.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const togglePlay3 = () => {
+    if (isPlaying) {
+      audioRef3.current?.pause();
+    } else {
+      audioRef3.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
   return (
     <div>
       <div
@@ -36,9 +72,23 @@ const Abnt = () => {
       </div>
 
       <div className="p-4 sm:p-6 flex flex-col gap-5">
-        <h2 className="font-bold text-lg sm:text-xl">
-          Objetivos principais da norma:
-        </h2>
+        <div className="flex items-center gap-4">
+          <h2 className="font-bold text-lg sm:text-xl">
+            Objetivos principais da norma:
+          </h2>
+
+          <div>
+            <audio ref={audioRef} src={introducao} />
+            <div className="tooltip" data-tip="Texto Para Fala">
+              <button
+                onClick={togglePlay}
+                className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+              >
+                <LuSpeech className="text-2xl" />
+              </button>
+            </div>
+          </div>
+        </div>
 
         <ul className="list-decimal list-inside ml-4">
           <li>
@@ -61,7 +111,20 @@ const Abnt = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-lg sm:text-xl">Aplicações</h2>
+        <div className="flex items-center gap-4">
+          <h2 className="font-bold text-lg sm:text-xl">Aplicações</h2>
+          <div>
+            <audio ref={audioRef2} src={aplicacoes} />
+            <div className="tooltip" data-tip="Texto Para Fala">
+              <button
+                onClick={togglePlay2}
+                className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+              >
+                <LuSpeech className="text-2xl" />
+              </button>
+            </div>
+          </div>
+        </div>
 
         <p className="leading-relaxed">
           As aplicações incluem tecnologia assistiva, como leitores de tela,
@@ -74,7 +137,20 @@ const Abnt = () => {
           os usuários possam acessar e interagir com o conteúdo.
         </p>
 
-        <h2 className="font-bold text-lg sm:text-xl">Checklists</h2>
+        <div className="flex items-center gap-4">
+          <h2 className="font-bold text-lg sm:text-xl">Checklists</h2>
+          <div>
+            <audio ref={audioRef3} src={checklist} />
+            <div className="tooltip" data-tip="Texto Para Fala">
+              <button
+                onClick={togglePlay3}
+                className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+              >
+                <LuSpeech className="text-2xl" />
+              </button>
+            </div>
+          </div>
+        </div>
         <p>
           O projeto ABNT NBR 17225 disponibiliza checklists especializados para
           a avaliação da qualidade da acessibilidade em websites. Esses
@@ -84,7 +160,7 @@ const Abnt = () => {
           todos os usuários.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-2">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-2 overflow-x-auto">
           <button
             onClick={() => navigate("/abnt/tabela/c1")}
             className="btn bg-primary-800 text-white w-full sm:w-auto"
@@ -125,6 +201,34 @@ const Abnt = () => {
             className="btn bg-primary-800 text-white w-full sm:w-auto"
           >
             Tabela C.6 – Tabelas
+          </button>
+
+          <button
+            onClick={() => navigate("/abnt/tabela/c7")}
+            className="btn bg-primary-800 text-white w-full sm:w-auto"
+          >
+            Tabela C.7 – Links e navegação
+          </button>
+
+          <button
+            onClick={() => navigate("/abnt/tabela/c8")}
+            className="btn bg-primary-800 text-white w-full sm:w-auto"
+          >
+            Tabela C.8 – Botões e controles
+          </button>
+
+          <button
+            onClick={() => navigate("/abnt/tabela/c9")}
+            className="btn bg-primary-800 text-white w-full sm:w-auto"
+          >
+            Tabela C.9 – Formulários e entrada de dados
+          </button>
+
+          <button
+            onClick={() => navigate("/abnt/tabela/c10")}
+            className="btn bg-primary-800 text-white w-full sm:w-auto"
+          >
+            Tabela C.10 – Apresentação
           </button>
         </div>
       </div>
