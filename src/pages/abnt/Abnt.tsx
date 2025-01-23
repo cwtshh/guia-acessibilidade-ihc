@@ -160,7 +160,7 @@ const Abnt = () => {
           todos os usuários.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-2 overflow-x-auto">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-2 overflow-x-auto">
           <button
             onClick={() => navigate("/abnt/tabela/c1")}
             className="btn bg-primary-800 text-white w-full sm:w-auto"
