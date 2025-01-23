@@ -1,5 +1,3 @@
-import React from "react";
-
 const TabelaC11 = () => {
   return (
     <div>

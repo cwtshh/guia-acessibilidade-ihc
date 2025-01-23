@@ -1,5 +1,3 @@
-import React from "react";
-
 const TabelaC9 = () => {
   return (
     <div className="overflow-x-auto p-6">
