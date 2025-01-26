@@ -60,7 +60,9 @@ const AcessibilidadeWeb = () => {
         {diretrizes.map((diretriz) => {
           return (
             <div key={diretriz.categoria}>
-              <h1>{diretriz.categoria.toUpperCase()}</h1>
+              <h1 className="font-bold text-xl">
+                {diretriz.categoria.toUpperCase()}
+              </h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 {diretriz.topicos.map((topico, index) => {
                   return (

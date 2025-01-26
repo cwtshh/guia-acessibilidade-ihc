@@ -18,7 +18,7 @@ const FuncoesAcessibilidade = () => {
   const isDarkTheme = theme === "dark";
   const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
   const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
-  const cardHeaderColor = isDarkTheme ? "bg-primary-800" : "bg-primary-600";
+  const cardHeaderColor = isDarkTheme ? "bg-primary-800" : "bg-primary-800";
 
   return (
     <div>
