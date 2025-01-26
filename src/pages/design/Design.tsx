@@ -66,15 +66,15 @@ const Design = () => {
                       key={index}
                       className="card bg-base-100 shadow-xl w-full sm:w-80 md:w-96 transform transition-transform duration-300 ease-in-out hover:scale-105"
                     >
-                      <div className="flex items-center">
-                        <div className="bg-primary-800 p-2 h-full  text-white">
+                      <div className="flex items-center h-full">
+                        <div className="bg-primary-800 p-2 h-full text-white rounded-tl-lg rounded-bl-lg">
                           <input
                             type="checkbox"
                             defaultChecked
                             className="checkbox bg-white"
                           />
                         </div>
-                        <div className="p-4">
+                        <div className="p-4 flex-1">
                           <p className="md:text-base text-gray-700">
                             {topico.descricao}
                           </p>
@@ -88,7 +88,7 @@ const Design = () => {
           );
         })}
       </div>
-      <div className="p-6">
+      <div className="bg-base-200 p-6">
         <h1 className="font-bold text-xl">Fontes</h1>
         <div className="flex flex-col gap-4">
           <p>

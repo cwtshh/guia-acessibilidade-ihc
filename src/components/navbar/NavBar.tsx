@@ -96,54 +96,42 @@ const NavBar = () => {
             }`}
           >
             <Link
-              to={"/wcag"}
+              to={"/acessibilidade/web"}
               className={`${
-                location.pathname === "/wcag"
+                location.pathname === "/acessibilidade/web"
                   ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                   : "transition-all duration-300 ease-in-out"
               }`}
             >
-              WCAG
+              Acessibilidade na Web
             </Link>
           </li>
           <li
             className={`${
-              location.pathname === "/abnt"
+              location.pathname === "/Design"
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                 : "transition-all duration-300 ease-in-out"
             }`}
           >
             <Link
-              to={"/abnt"}
+              to={"/Design"}
               className="transition-colors duration-300 hover:text-primary-600"
             >
-              ABNT
+              Design
             </Link>
           </li>
           <li
             className={`${
-              location.pathname === "/heuristicas"
+              location.pathname === "/conteudo"
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                 : "transition-all duration-300 ease-in-out"
             }`}
           >
             <Link
-              to={"/heuristicas"}
+              to={"/conteudo"}
               className="transition-colors duration-300 hover:text-primary-600"
             >
-              Heurísticas de Nielsen
-            </Link>
-          </li>
-
-          <li
-            className={`${
-              location.pathname === "/acessibilidade-digital"
-                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
-                : "transition-all duration-300 ease-in-out"
-            }`}
-          >
-            <Link to={"/acessibilidade-digital"}>
-              Guia de Boas Práticas para Acessibilidade Digital
+              Conteúdo
             </Link>
           </li>
         </ul>
@@ -195,43 +183,49 @@ const NavBar = () => {
                   Voltar ao início
                 </Link>
               </li>
-              <li className={`${location.pathname === "/" ? "active" : ""}`}>
-                <Link
-                  to={"/wcag"}
-                  onClick={closeMenu}
-                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
-                >
-                  WCAG
-                </Link>
-              </li>
               <li
                 className={`${
-                  location.pathname === "/abnt"
+                  location.pathname === "/acessibilidade/web"
                     ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                     : "transition-all duration-300 ease-in-out"
                 }`}
               >
                 <Link
-                  to={"/abnt"}
+                  to={"/acessibilidade/web"}
                   onClick={closeMenu}
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
-                  ABNT
+                  Acessibilidade na Web
                 </Link>
               </li>
               <li
                 className={`${
-                  location.pathname === "/heuristicas"
+                  location.pathname === "/design"
                     ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                     : "transition-all duration-300 ease-in-out"
                 }`}
               >
                 <Link
-                  to={"/heuristicas"}
+                  to={"/design"}
                   onClick={closeMenu}
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
-                  Heurísticas de Nielsen
+                  Design
+                </Link>
+              </li>
+              <li
+                className={`${
+                  location.pathname === "/conteudo"
+                    ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                    : "transition-all duration-300 ease-in-out"
+                }`}
+              >
+                <Link
+                  to={"/conteudo"}
+                  onClick={closeMenu}
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
+                >
+                  Conteúdo
                 </Link>
               </li>
 

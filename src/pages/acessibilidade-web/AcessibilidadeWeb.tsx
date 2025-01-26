@@ -58,7 +58,7 @@ const AcessibilidadeWeb = () => {
               <h1 className="font-bold text-xl text-black">
                 {diretriz.categoria.toUpperCase()}
               </h1>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                 {diretriz.topicos.map((topico, index) => {
                   return (
                     <div
@@ -66,7 +66,7 @@ const AcessibilidadeWeb = () => {
                       className="card bg-base-100 shadow-xl w-full sm:w-80 md:w-96 transform transition-transform duration-300 ease-in-out hover:scale-105"
                     >
                       <div className="flex items-center">
-                        <div className="bg-primary-800 p-2 h-full  text-white">
+                        <div className="bg-primary-800 p-2 h-full text-white rounded-tl-lg">
                           <input
                             type="checkbox"
                             defaultChecked
