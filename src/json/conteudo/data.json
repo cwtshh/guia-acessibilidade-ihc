@@ -1,0 +1,49 @@
+{
+  "categoria": "Conteúdo",
+  "topicos": [
+    {
+      "descricao": "Utilizar texto alternativo (alt text) para todas as imagens.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
+    },
+    {
+      "descricao": "Garantir que o contraste entre o texto e o fundo seja suficientemente alto para facilitar a leitura.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+    },
+    {
+      "descricao": "Incluir legendas em vídeos e transcrições para conteúdo de áudio.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/media-equiv-captions.html"
+    },
+    {
+      "descricao": "Certificar-se de que todos os links sejam claramente identificados, com texto que indique a ação do link.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose.html"
+    },
+    {
+      "descricao": "Garantir que o conteúdo possa ser lido em diferentes tamanhos de texto e com zoom sem perda de conteúdo ou funcionalidade.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/responsive-design.html"
+    },
+    {
+      "descricao": "Evitar o uso de apenas cores para transmitir informações, sempre que possível.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/color-contrast.html"
+    },
+    {
+      "descricao": "Organizar o conteúdo de forma lógica e usar cabeçalhos para estruturar o texto.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/page-titles.html"
+    },
+    {
+      "descricao": "Fornecer mecanismos de navegação simples e consistentes.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html"
+    },
+    {
+      "descricao": "Usar formulários de maneira clara, com rótulos adequados para campos e instruções de preenchimento.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/forms.html"
+    },
+    {
+      "descricao": "Oferecer feedback claro para os usuários sobre ações realizadas e erros cometidos.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html"
+    },
+    {
+      "descricao": "Fornecer opções de personalização de conteúdo para atender a diferentes necessidades dos usuários.",
+      "fonte": "https://www.w3.org/WAI/WCAG21/Understanding/adaptable-content.html"
+    }
+  ]
+}

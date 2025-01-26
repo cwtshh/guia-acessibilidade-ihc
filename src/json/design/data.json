@@ -1,0 +1,86 @@
+{
+  "perceptivel": {
+    "categoria": "Perceptível",
+    "topicos": [
+      {
+        "descricao": "Fornecer alternativas textuais para conteúdo não textual.",
+        "fonte": "WCAG 1.1.1"
+      },
+      {
+        "descricao": "Permitir que os usuários possam ajustar a cor do conteúdo para melhorar o contraste.",
+        "fonte": "WCAG 1.4.3"
+      },
+      {
+        "descricao": "Ajustar a iluminação do conteúdo de forma que seja perceptível para todos os usuários.",
+        "fonte": "WCAG 1.4.6"
+      },
+      {
+        "descricao": "Garantir que o conteúdo seja visível e compreensível sem a necessidade de tecnologias assistivas.",
+        "fonte": "WCAG 1.4.10"
+      }
+    ]
+  },
+  "operavel": {
+    "categoria": "Operável",
+    "topicos": [
+      {
+        "descricao": "Garantir que todas as funcionalidades possam ser acionadas com o teclado.",
+        "fonte": "WCAG 2.1.1"
+      },
+      {
+        "descricao": "Garantir que as funcionalidades possam ser acessadas facilmente através de um navegador.",
+        "fonte": "WCAG 2.4.7"
+      },
+      {
+        "descricao": "Permitir a personalização das ações de controle de dispositivos, como o mouse.",
+        "fonte": "WCAG 2.5.1"
+      },
+      {
+        "descricao": "Garantir que as interações com a interface sejam previsíveis e consistentes.",
+        "fonte": "WCAG 2.4.3"
+      },
+      {
+        "descricao": "Fornecer uma forma de os usuários cancelarem ou reverterem ações.",
+        "fonte": "WCAG 2.2.1"
+      }
+    ]
+  },
+  "compreensivel": {
+    "categoria": "Compreensível",
+    "topicos": [
+      {
+        "descricao": "Garantir que o idioma da página seja claro e definido.",
+        "fonte": "WCAG 3.1.1"
+      },
+      {
+        "descricao": "Evitar a utilização de elementos que alterem o comportamento esperado da interface.",
+        "fonte": "WCAG 3.2.3"
+      },
+      {
+        "descricao": "Utilizar elementos consistentes e previsíveis na interface.",
+        "fonte": "WCAG 3.2.4"
+      },
+      {
+        "descricao": "Fornecer formas de ajudar os usuários a identificar erros e oferecer sugestões para corrigí-los.",
+        "fonte": "WCAG 3.3.3"
+      }
+    ]
+  },
+  "robusto": {
+    "categoria": "Robusto",
+    "topicos": [
+      {
+        "descricao": "Garantir que os usuários possam interagir com o conteúdo, mesmo se ele for alterado dinamicamente.",
+        "fonte": "WCAG 4.1.2"
+      },
+      {
+        "descricao": "Garantir que a página funcione de forma compatível com as tecnologias assistivas.",
+        "fonte": "WCAG 4.1.3"
+      },
+      {
+        "descricao": "Garantir que o conteúdo seja compatível com os padrões da web e novas tecnologias.",
+        "fonte": "WCAG 4.1.1"
+      }
+    ]
+  }
+}

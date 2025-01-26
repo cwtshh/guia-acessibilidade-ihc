@@ -32,16 +32,19 @@ const NavBar = () => {
 
   const NomePaginaMap: { [key: string]: string } = {
     "/": "Guia de Acessibilidade - IHC",
-    "/wcag": "WCAG",
-    "/abnt": "ABNT",
-    "/heuristicas": "Heurísticas de Nielsen",
-    "/acessibilidade-digital": "Acessibilidade Digital",
-    "/abnt/tabela/c1": "Tabela C.1 - Interação por teclado",
-    "/abnt/tabela/c2": "Tabela C.2 - Imagens",
-    "/abnt/tabela/c3": "Tabela C.3 - Cabeçalhos",
-    "/abnt/tabela/c4": "Tabela C.4 - Regiões",
-    "/abnt/tabela/c5": "Tabela C.5 - Listas",
-    "/abnt/tabela/c6": "Tabela C.6 - Tabelas",
+    // "/wcag": "WCAG",
+    // "/abnt": "ABNT",
+    // "/heuristicas": "Heurísticas de Nielsen",
+    // "/acessibilidade-digital": "Acessibilidade Digital",
+    // "/abnt/tabela/c1": "Tabela C.1 - Interação por teclado",
+    // "/abnt/tabela/c2": "Tabela C.2 - Imagens",
+    // "/abnt/tabela/c3": "Tabela C.3 - Cabeçalhos",
+    // "/abnt/tabela/c4": "Tabela C.4 - Regiões",
+    // "/abnt/tabela/c5": "Tabela C.5 - Listas",
+    // "/abnt/tabela/c6": "Tabela C.6 - Tabelas",
+    "/acessibilidade/web": "Acessibilidade na Web",
+    "/design": "Design",
+    "/conteudo": "Conteúdo",
   };
 
   return (

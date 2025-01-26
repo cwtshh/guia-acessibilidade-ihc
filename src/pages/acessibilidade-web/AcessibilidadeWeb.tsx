@@ -1,6 +1,7 @@
 import data from "../../json/acessibilidade-web/data.json";
 import bg from "../../assets/bg/gradient_2.jpg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 interface Topico {
   titulo: string;
   descricao: string;
@@ -19,7 +20,9 @@ const AcessibilidadeWeb = () => {
     setDiretrizes(data);
   }, []);
 
-  console.log(diretrizes);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -32,7 +35,7 @@ const AcessibilidadeWeb = () => {
         <div className="breadcrumbs text-sm">
           <ul>
             <li>
-              <a>Home</a>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>Acessibilidade</li>
             <li>Web</li>

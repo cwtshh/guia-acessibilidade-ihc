@@ -1,8 +1,9 @@
 import IntegrantesCard from "../../components/integrantes-card/IntegrantesCard";
 import integrantes_data from "../../json/integrantes/data.json";
 import chars from "../../assets/char/—Pngtree—we are hiring character illustration_6680830.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bg from "../../assets/bg/gradient_2.jpg";
+import { FaHome } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,6 +14,16 @@ const Home = () => {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="w-full sm:w-2/3 flex flex-col gap-6">
+          <div className="breadcrumbs text-sm">
+            <ul>
+              <li>
+                <FaHome />
+              </li>
+              <li>
+                <Link to={"/"}>Home</Link>
+              </li>
+            </ul>
+          </div>
           <h1 className="font-bold text-xl sm:text-2xl">
             Seja bem-vindo ao Guia de Acessibilidade do Grupo 9!
           </h1>
@@ -59,11 +70,20 @@ const Home = () => {
               Acessibilidade na Web
             </button>
 
-            <button
-              onClick={() => navigate("/acessibilidade/web")}
-              className="btn"
-            >
+            <button onClick={() => navigate("/design")} className="btn">
               Design
+            </button>
+
+            <button onClick={() => navigate("/conteudo")} className="btn">
+              Conteúdo
+            </button>
+
+            <button onClick={() => navigate("/conteudo")} className="btn">
+              Ferramentas de acessibilidade
+            </button>
+
+            <button onClick={() => navigate("/conteudo")} className="btn">
+              Exemplos
             </button>
           </div>
         </div>

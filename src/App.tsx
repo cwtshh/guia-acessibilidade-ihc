@@ -1,19 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import NavBar from "./components/navbar/NavBar";
-import Heuristicas from "./pages/heuristicas/Heuristicas";
-import JornadaUsuario from "./pages/jornada-usuario/JornadaUsuario/JornadaUsuario";
-import AcessibilidadeDigital from "./pages/acessibilidade-digital/AcessibilidadeDigital";
-import Wcag from "./pages/wcag/Wcag";
-import Abnt from "./pages/abnt/Abnt";
-import Fontes from "./pages/fontes/Fontes";
-import TabelaC1 from "./pages/abnt/tabela-c1/TabelaC1";
-import TabelaC2 from "./pages/abnt/tabela-c2/TabelaC2";
-import TabelaC3 from "./pages/abnt/tabela-c3/TabelaC3";
-import TabelaC4 from "./pages/abnt/tabela-c4/TabelaC4";
-import Tabelac5 from "./pages/abnt/tabela-c5/Tabelac5";
-import TabelaC6 from "./pages/abnt/tabela-c6/TabelaC6";
 import AcessibilidadeWeb from "./pages/acessibilidade-web/AcessibilidadeWeb";
+import Design from "./pages/design/Design";
+import Conteudo from "./pages/conteudo/Conteudo";
 
 function App() {
   return (
@@ -22,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/acessibilidade/web" element={<AcessibilidadeWeb />} />
+        <Route path="/design" element={<Design />} />
+        <Route path="/conteudo" element={<Conteudo />} />
         {/* <Route path="/heuristicas" element={<Heuristicas />} />
         <Route path="/jornada-usuario" element={<JornadaUsuario />} />
         <Route
