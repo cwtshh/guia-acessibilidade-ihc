@@ -1,0 +1,207 @@
+[
+  {
+    "categoria": "imagem",
+    "topicos": [
+      {
+        "titulo": "Texto Alternativo Relevante",
+        "descricao": "Inclua textos alternativos ('alt') que descrevam claramente a função ou conteúdo da imagem. Imagens decorativas devem ter 'alt=\"\"'.",
+        "fonte": "WCAG 1.1.1 Non-text Content"
+      },
+      {
+        "titulo": "Informações Fora da Imagem",
+        "descricao": "Forneça informações críticas contidas em imagens também em texto acessível, como legendas ou descrições próximas.",
+        "fonte": "WCAG 1.4.5 Images of Text"
+      },
+      {
+        "titulo": "Compatibilidade com Leitores de Tela",
+        "descricao": "Certifique-se de que o atributo 'role=\"img\"' e as descrições estejam adequadamente configurados para leitores de tela.",
+        "fonte": "WCAG 4.1.2 Name, Role, Value"
+      }
+    ]
+  },
+  {
+    "categoria": "vídeo",
+    "topicos": [
+      {
+        "titulo": "Legendas Sincronizadas e Precisas",
+        "descricao": "Ofereça legendas sincronizadas que representem claramente o conteúdo falado e os sons importantes.",
+        "fonte": "WCAG 1.2.2 Captions (Prerecorded)"
+      },
+      {
+        "titulo": "Descrição de Áudio",
+        "descricao": "Inclua descrições em áudio para vídeos com conteúdo visual crítico, tornando-os compreensíveis sem depender exclusivamente da visão.",
+        "fonte": "WCAG 1.2.3 Audio Description or Media Alternative"
+      },
+      {
+        "titulo": "Pausa e Controle",
+        "descricao": "Disponibilize controles para pausar, silenciar e ajustar a reprodução de vídeos.",
+        "fonte": "WCAG 2.1.1 Keyboard"
+      },
+      {
+        "titulo": "Evite Flash Excessivo",
+        "descricao": "Certifique-se de que o conteúdo visual em vídeos não apresente flashes que possam causar crises epilépticas.",
+        "fonte": "WCAG 2.3.1 Three Flashes or Below Threshold"
+      }
+    ]
+  },
+  {
+    "categoria": "controle",
+    "topicos": [
+      {
+        "titulo": "Fácil Identificação de Controles",
+        "descricao": "Nomeie claramente todos os botões, ícones e elementos interativos para que os usuários saibam sua função.",
+        "fonte": "WCAG 4.1.2 Name, Role, Value"
+      },
+      {
+        "titulo": "Teclas de Atalho",
+        "descricao": "Forneça teclas de atalho (shortcut keys) para ações comuns e certifique-se de que possam ser remapeadas.",
+        "fonte": "WCAG 2.1.4 Character Key Shortcuts"
+      },
+      {
+        "titulo": "Controles Visíveis",
+        "descricao": "Garanta que todos os controles sejam claramente visíveis, mesmo quando não estiverem em foco.",
+        "fonte": "WCAG 2.4.7 Focus Visible"
+      },
+      {
+        "titulo": "Evite Dependência de Mouse",
+        "descricao": "Permita que todos os controles e interações sejam acessíveis e funcionais usando apenas o teclado.",
+        "fonte": "WCAG 2.1.1 Keyboard"
+      }
+    ]
+  },
+  {
+    "categoria": "formulário",
+    "topicos": [
+      {
+        "titulo": "Rótulos Internos e Externos",
+        "descricao": "Utilize rótulos ('label') externos e placeholders descritivos que indiquem o propósito de cada campo de entrada.",
+        "fonte": "WCAG 3.3.2 Labels or Instructions"
+      },
+      {
+        "titulo": "Auto-preenchimento",
+        "descricao": "Ative atributos como 'autocomplete' nos campos de formulário para facilitar a entrada de dados frequentes.",
+        "fonte": "WCAG 1.3.5 Identify Input Purpose"
+      },
+      {
+        "titulo": "Validação em Tempo Real",
+        "descricao": "Informe erros imediatamente ao usuário, com instruções claras sobre como resolvê-los.",
+        "fonte": "WCAG 3.3.1 Error Identification"
+      },
+      {
+        "titulo": "Agrupamento Lógico",
+        "descricao": "Use '<fieldset>' e '<legend>' para agrupar e identificar conjuntos relacionados de campos.",
+        "fonte": "WCAG 1.3.1 Info and Relationships"
+      },
+      {
+        "titulo": "Evitar Erros de Preenchimento",
+        "descricao": "Evite a validação de formulário com base em regras vagas, garantindo que o preenchimento seja claro e compreensível.",
+        "fonte": "WCAG 3.3.3 Error Suggestion and Description"
+      }
+    ]
+  },
+  {
+    "categoria": "mídia",
+    "topicos": [
+      {
+        "titulo": "Múltiplas Alternativas",
+        "descricao": "Ofereça múltiplas opções de consumo de mídia, como transcrições detalhadas e versões com descrição em áudio.",
+        "fonte": "WCAG 1.2.1 Audio-only and Video-only (Prerecorded)"
+      },
+      {
+        "titulo": "Controles Compatíveis",
+        "descricao": "Assegure que controles de mídia sejam facilmente utilizáveis com teclado e leitores de tela.",
+        "fonte": "WCAG 2.1.1 Keyboard"
+      },
+      {
+        "titulo": "Evitar Barreiras com Formatos Exclusivos",
+        "descricao": "Evite o uso de formatos de mídia que não sejam acessíveis, como certos tipos de Flash.",
+        "fonte": "WCAG 1.1.1 Non-text Content"
+      }
+    ]
+  },
+  {
+    "categoria": "semântica",
+    "topicos": [
+      {
+        "titulo": "Uso Adequado de ARIA",
+        "descricao": "Utilize atributos ARIA somente quando os elementos semânticos padrão do HTML não forem suficientes para acessibilidade.",
+        "fonte": "WCAG 4.1.2 Name, Role, Value"
+      },
+      {
+        "titulo": "Títulos e Estrutura",
+        "descricao": "Garanta que cada página tenha um '<h1>' único e que os cabeçalhos subsequentes respeitem uma hierarquia lógica.",
+        "fonte": "WCAG 1.3.1 Info and Relationships"
+      },
+      {
+        "titulo": "Links Descritivos",
+        "descricao": "Escreva textos de links que expliquem claramente seu destino ou função, evitando 'clique aqui'.",
+        "fonte": "WCAG 2.4.4 Link Purpose (In Context)"
+      },
+      {
+        "titulo": "Evitar Usar Apenas Cores para Comunicação",
+        "descricao": "Não dependa apenas das cores para transmitir informações, pois pode não ser percebido por usuários com deficiência visual.",
+        "fonte": "WCAG 1.4.1 Use of Color"
+      }
+    ]
+  },
+  {
+    "categoria": "texto",
+    "topicos": [
+      {
+        "titulo": "Contraste Adequado",
+        "descricao": "Garanta que o contraste entre texto e fundo seja adequado para pessoas com deficiências visuais, como daltonismo.",
+        "fonte": "WCAG 1.4.3 Contrast (Minimum)"
+      },
+      {
+        "titulo": "Tamanho de Fonte Ajustável",
+        "descricao": "Permita que o tamanho da fonte seja ajustável sem comprometer a legibilidade.",
+        "fonte": "WCAG 1.4.4 Resize Text"
+      },
+      {
+        "titulo": "Texto Claro e Simples",
+        "descricao": "Utilize uma linguagem simples e direta, evitando jargões, para garantir que o conteúdo seja acessível a uma variedade de leitores.",
+        "fonte": "WCAG 3.1.5 Reading Level"
+      },
+      {
+        "titulo": "Evitar Texto em Imagens",
+        "descricao": "Sempre que possível, use texto real em vez de texto dentro de imagens, para garantir que seja legível por leitores de tela.",
+        "fonte": "WCAG 1.4.5 Images of Text"
+      }
+    ]
+  },
+  {
+    "categoria": "teclado",
+    "topicos": [
+      {
+        "titulo": "Acessibilidade de Navegação",
+        "descricao": "Assegure que toda a navegação do site seja acessível usando apenas o teclado.",
+        "fonte": "WCAG 2.1.1 Keyboard"
+      },
+      {
+        "titulo": "Foco Visível",
+        "descricao": "Mantenha o foco visível durante a navegação do teclado para que os usuários saibam onde estão na interface.",
+        "fonte": "WCAG 2.4.7 Focus Visible"
+      },
+      {
+        "titulo": "Evitar Navegação Intrusiva",
+        "descricao": "Não use navegação ou modais que dificultem a navegação pelo teclado ou que não possam ser fechados facilmente.",
+        "fonte": "WCAG 2.1.2 No Keyboard Trap"
+      }
+    ]
+  },
+  {
+    "categoria": "título",
+    "topicos": [
+      {
+        "titulo": "Títulos de Páginas Únicos",
+        "descricao": "Cada página deve ter um título único e significativo, refletindo claramente o conteúdo da página.",
+        "fonte": "WCAG 2.4.2 Page Titled"
+      },
+      {
+        "titulo": "Títulos Hierárquicos",
+        "descricao": "Use títulos e subtítulos de forma hierárquica para organizar o conteúdo de forma lógica e acessível.",
+        "fonte": "WCAG 1.3.1 Info and Relationships"
+      }
+    ]
+  }
+]

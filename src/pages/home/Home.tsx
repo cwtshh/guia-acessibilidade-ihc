@@ -36,7 +36,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button onClick={() => navigate("/wcag")} className="btn">
+            {/* <button onClick={() => navigate("/wcag")} className="btn">
               WCAG
             </button>
             <button onClick={() => navigate("/abnt")} className="btn">
@@ -50,6 +50,20 @@ const Home = () => {
               className="btn"
             >
               Guia de Boas Práticas para Acessibilidade Digital
+            </button> */}
+
+            <button
+              onClick={() => navigate("/acessibilidade/web")}
+              className="btn"
+            >
+              Acessibilidade na Web
+            </button>
+
+            <button
+              onClick={() => navigate("/acessibilidade/web")}
+              className="btn"
+            >
+              Design
             </button>
           </div>
         </div>

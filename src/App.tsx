@@ -13,6 +13,7 @@ import TabelaC3 from "./pages/abnt/tabela-c3/TabelaC3";
 import TabelaC4 from "./pages/abnt/tabela-c4/TabelaC4";
 import Tabelac5 from "./pages/abnt/tabela-c5/Tabelac5";
 import TabelaC6 from "./pages/abnt/tabela-c6/TabelaC6";
+import AcessibilidadeWeb from "./pages/acessibilidade-web/AcessibilidadeWeb";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/heuristicas" element={<Heuristicas />} />
+        <Route path="/acessibilidade/web" element={<AcessibilidadeWeb />} />
+        {/* <Route path="/heuristicas" element={<Heuristicas />} />
         <Route path="/jornada-usuario" element={<JornadaUsuario />} />
         <Route
           path="/acessibilidade-digital"
@@ -34,7 +36,7 @@ function App() {
         <Route path="/abnt/tabela/c4" element={<TabelaC4 />} />
         <Route path="/abnt/tabela/c5" element={<Tabelac5 />} />
         <Route path="/abnt/tabela/c6" element={<TabelaC6 />} />
-        <Route path="/fontes" element={<Fontes />} />
+        <Route path="/fontes" element={<Fontes />} /> */}
       </Routes>
     </div>
   );
