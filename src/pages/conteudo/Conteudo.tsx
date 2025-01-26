@@ -2,6 +2,7 @@ import bg from "../../assets/bg/gradient_2.jpg";
 import { Link } from "react-router-dom";
 import data from "../../json/conteudo/data.json";
 import { useEffect, useState } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 interface Topico {
   descricao: string;
@@ -15,6 +16,7 @@ interface Diretriz {
 
 const Conteudo = () => {
   const [topicos, setTipocos] = useState<Diretriz>();
+  const { theme } = useTheme();
 
   useEffect(() => {
     setTipocos(data);
@@ -23,6 +25,11 @@ const Conteudo = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const isDarkTheme = theme === "dark";
+  const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
+  const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
+
   return (
     <div>
       <div
@@ -56,7 +63,7 @@ const Conteudo = () => {
           return (
             <div
               key={index}
-              className="card bg-base-100 shadow-xl w-full transform transition-transform duration-300 ease-in-out hover:scale-105"
+              className={`card ${bgColor} ${textColor} shadow-xl w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
             >
               <div className="flex items-center h-full">
                 <div className="bg-primary-800 p-2 h-full text-white rounded-tl-lg rounded-bl-lg">
@@ -75,8 +82,14 @@ const Conteudo = () => {
         })}
       </div>
 
-      <div className="p-6 bg-base-200 p-6">
-        <h1 className="font-bold text-xl text-black">Fontes</h1>
+      <div className="p-6 bg-base-200">
+        <h1
+          className={`font-bold text-xl ${
+            theme === "dark" ? "text-white" : "text-black"
+          }`}
+        >
+          Fontes
+        </h1>
         <div className="flex flex-col gap-4">
           <p>
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text

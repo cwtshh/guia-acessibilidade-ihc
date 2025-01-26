@@ -78,12 +78,15 @@ const Home = () => {
               Conteúdo
             </button>
 
-            <button onClick={() => navigate("/conteudo")} className="btn">
-              Ferramentas de acessibilidade
+            <button
+              onClick={() => navigate("/acessibilidade/funcoes")}
+              className="btn"
+            >
+              Funcionalidades de acessibilidade
             </button>
 
             <button onClick={() => navigate("/conteudo")} className="btn">
-              Exemplos
+              Ferramentas de acessibilidade
             </button>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import bg from "../../assets/bg/gradient_2.jpg";
 import data from "../../json/design/data.json";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 
 interface Topico {
   descricao: string;
@@ -15,6 +16,7 @@ interface Diretriz {
 
 const Design = () => {
   const [diretrizes, setDiretrizes] = useState<Diretriz[]>([]);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const transformedData: Diretriz[] = Object.values(data);
@@ -24,6 +26,10 @@ const Design = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const isDarkTheme = theme === "dark";
+  const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
+  const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
 
   return (
     <div>
@@ -52,11 +58,15 @@ const Design = () => {
         </p>
       </div>
 
-      <div className="p-6 flex flex-col gap-5">
+      <div
+        className={`p-6 flex flex-col gap-5 ${
+          theme === "dark" ? "text-white" : "text-black"
+        }`}
+      >
         {diretrizes.map((diretriz) => {
           return (
             <div key={diretriz.categoria}>
-              <h1 className="font-bold text-xl text-black">
+              <h1 className="font-bold text-xl">
                 {diretriz.categoria.toUpperCase()}
               </h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
@@ -64,10 +74,12 @@ const Design = () => {
                   return (
                     <div
                       key={index}
-                      className="card bg-base-100 shadow-xl w-full sm:w-80 md:w-96 transform transition-transform duration-300 ease-in-out hover:scale-105"
+                      className={`card ${bgColor} ${textColor} shadow-xl w-full sm:w-80 md:w-96 transform transition-transform duration-300 ease-in-out hover:scale-105`}
                     >
                       <div className="flex items-center h-full">
-                        <div className="bg-primary-800 p-2 h-full text-white rounded-tl-lg rounded-bl-lg">
+                        <div
+                          className={`bg-primary-800 p-2 h-full text-white rounded-tl-lg rounded-bl-lg`}
+                        >
                           <input
                             type="checkbox"
                             defaultChecked
@@ -75,7 +87,11 @@ const Design = () => {
                           />
                         </div>
                         <div className="p-4 flex-1">
-                          <p className="md:text-base text-gray-700">
+                          <p
+                            className={`md:text-base ${
+                              theme === "dark" ? "text-white" : "text-black"
+                            }`}
+                          >
                             {topico.descricao}
                           </p>
                         </div>

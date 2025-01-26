@@ -4,8 +4,11 @@ import NavBar from "./components/navbar/NavBar";
 import AcessibilidadeWeb from "./pages/acessibilidade-web/AcessibilidadeWeb";
 import Design from "./pages/design/Design";
 import Conteudo from "./pages/conteudo/Conteudo";
+import FuncoesAcessibilidade from "./pages/funcoes-acessibilidade/FuncoesAcessibilidade";
+import { themeChange } from "theme-change";
 
 function App() {
+  themeChange();
   return (
     <div className="h-screen flex flex-col">
       <NavBar />
@@ -14,6 +17,10 @@ function App() {
         <Route path="/acessibilidade/web" element={<AcessibilidadeWeb />} />
         <Route path="/design" element={<Design />} />
         <Route path="/conteudo" element={<Conteudo />} />
+        <Route
+          path="/acessibilidade/funcoes"
+          element={<FuncoesAcessibilidade />}
+        />
         {/* <Route path="/heuristicas" element={<Heuristicas />} />
         <Route path="/jornada-usuario" element={<JornadaUsuario />} />
         <Route
