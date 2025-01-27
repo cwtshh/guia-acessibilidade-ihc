@@ -97,6 +97,13 @@ const Home = () => {
             >
               Ferramentas de acessibilidade
             </button>
+
+            <button
+              onClick={() => navigate("/checklist/acessibilidade")}
+              className="btn bg-white text-black rounded-full"
+            >
+              CheckList de Acessibilidade
+            </button>
           </div>
         </div>
 

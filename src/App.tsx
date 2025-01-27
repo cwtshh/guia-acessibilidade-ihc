@@ -7,6 +7,7 @@ import Conteudo from "./pages/conteudo/Conteudo";
 import FuncoesAcessibilidade from "./pages/funcoes-acessibilidade/FuncoesAcessibilidade";
 import { themeChange } from "theme-change";
 import FerramentasAcessibilidades from "./pages/ferramentas-acessibilidade/FerramentasAcessibilidades";
+import CheckListAcessibilidade from "./pages/checklist/CheckListAcessibilidade";
 
 function App() {
   themeChange();
@@ -25,6 +26,10 @@ function App() {
         <Route
           path="/acessibilidade/ferramentas"
           element={<FerramentasAcessibilidades />}
+        />
+        <Route
+          path="/checklist/acessibilidade"
+          element={<CheckListAcessibilidade />}
         />
         {/* <Route path="/heuristicas" element={<Heuristicas />} />
         <Route path="/jornada-usuario" element={<JornadaUsuario />} />

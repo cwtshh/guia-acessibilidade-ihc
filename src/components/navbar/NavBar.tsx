@@ -52,6 +52,7 @@ const NavBar = () => {
     "/conteudo": "Conteúdo",
     "/acessibilidade/funcoes": "Funções de acessibilidade",
     "/acessibilidade/ferramentas": "Ferr. de acessibilidade",
+    "/checklist/acessibilidade": "CheckList de Acessibilidade",
   };
 
   return (
@@ -175,6 +176,21 @@ const NavBar = () => {
               className="transition-colors duration-300 hover:text-primary-600"
             >
               Ferramentas de Acessibilidade
+            </Link>
+          </li>
+
+          <li
+            className={`${
+              location.pathname === "/checklist/acessibilidade"
+                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
+            }`}
+          >
+            <Link
+              to={"/checklist/acessibilidade"}
+              className="transition-colors duration-300 hover:text-primary-600"
+            >
+              Checklist de Acessibilidade
             </Link>
           </li>
 
@@ -349,6 +365,22 @@ const NavBar = () => {
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
                   Ferramentas de Acessibilidade
+                </Link>
+              </li>
+
+              <li
+                className={`${
+                  location.pathname === "/checklist/acessibilidade"
+                    ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                    : "transition-all duration-300 ease-in-out"
+                }`}
+              >
+                <Link
+                  to={"/checklist/acessibilidade"}
+                  onClick={closeMenu}
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
+                >
+                  CheckList de Acessibilidade
                 </Link>
               </li>
             </ul>
