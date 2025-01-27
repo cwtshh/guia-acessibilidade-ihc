@@ -81,7 +81,7 @@ const AcessibilidadeWeb = () => {
                         <div
                           className={`p-2 ${
                             theme === "cupcake" ? "bg-gray-200" : ""
-                          } w-full h-full`}
+                          } w-full h-full rounded-tr-lg`}
                         >
                           <h2
                             className={`card-title text-lg md:text-xl font-semibold ${
