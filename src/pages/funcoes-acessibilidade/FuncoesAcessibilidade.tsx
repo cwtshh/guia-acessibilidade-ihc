@@ -98,7 +98,9 @@ const FuncoesAcessibilidade = () => {
       <div
         className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4 p-6 ${textColor}`}
       >
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
@@ -118,7 +120,9 @@ const FuncoesAcessibilidade = () => {
           </div>
         </div>
 
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
@@ -135,7 +139,9 @@ const FuncoesAcessibilidade = () => {
           </div>
         </div>
 
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
@@ -152,7 +158,9 @@ const FuncoesAcessibilidade = () => {
           </div>
         </div>
 
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
@@ -176,7 +184,9 @@ const FuncoesAcessibilidade = () => {
           </div>
         </div>
 
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
@@ -197,9 +207,11 @@ const FuncoesAcessibilidade = () => {
           </div>
         </div>
 
-        <div className={`${bgColor} rounded-lg shadow-md w-full`}>
+        <div
+          className={`${bgColor} rounded-lg shadow-md w-full transform transition-transform duration-300 ease-in-out hover:scale-105`}
+        >
           <div
-            className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
+            className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5 `}
           >
             <IoColorPaletteOutline className="text-2xl" />
             <h2 className="font-bold text-xl">Interface Personalizável</h2>
