@@ -1,8 +1,10 @@
 import bg from "../../assets/bg/gradient_2.jpg";
 import { Link } from "react-router-dom";
 import data from "../../json/conteudo/data.json";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useTheme } from "../../context/ThemeContext";
+import conteudo from "../../assets/text-to-speech/v2/conteudo/conteudo.mp3";
+import { LuSpeech } from "react-icons/lu";
 
 interface Topico {
   descricao: string;
@@ -17,6 +19,17 @@ interface Diretriz {
 const Conteudo = () => {
   const [topicos, setTipocos] = useState<Diretriz>();
   const { theme } = useTheme();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   useEffect(() => {
     setTipocos(data);
@@ -56,6 +69,18 @@ const Conteudo = () => {
           navegação clara, formulários acessíveis e feedback para erros. A ideia
           é criar uma experiência inclusiva e fácil de usar para todos.
         </p>
+
+        <div className="mt-6">
+          <audio ref={audioRef} src={conteudo} />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-4 p-6">

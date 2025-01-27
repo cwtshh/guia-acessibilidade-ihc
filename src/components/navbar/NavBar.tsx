@@ -51,6 +51,7 @@ const NavBar = () => {
     "/design": "Design",
     "/conteudo": "Conteúdo",
     "/acessibilidade/funcoes": "Funções de acessibilidade",
+    "/acessibilidade/ferramentas": "Ferr. de acessibilidade",
   };
 
   return (
@@ -159,6 +160,21 @@ const NavBar = () => {
               className="transition-colors duration-300 hover:text-primary-600"
             >
               Funcionalidades de Acessibilidade
+            </Link>
+          </li>
+
+          <li
+            className={`${
+              location.pathname === "/acessibilidade/ferramentas"
+                ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                : "transition-all duration-300 ease-in-out"
+            }`}
+          >
+            <Link
+              to={"/acessibilidade/ferramentas"}
+              className="transition-colors duration-300 hover:text-primary-600"
+            >
+              Ferramentas de Acessibilidade
             </Link>
           </li>
 
@@ -317,6 +333,22 @@ const NavBar = () => {
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
                   Funcionalidades de Acessibilidade
+                </Link>
+              </li>
+
+              <li
+                className={`${
+                  location.pathname === "/acessibilidade/ferramentas"
+                    ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
+                    : "transition-all duration-300 ease-in-out"
+                }`}
+              >
+                <Link
+                  to={"/acessibilidade/ferramentas"}
+                  onClick={closeMenu}
+                  className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
+                >
+                  Ferramentas de Acessibilidade
                 </Link>
               </li>
             </ul>

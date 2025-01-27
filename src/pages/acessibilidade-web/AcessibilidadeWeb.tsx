@@ -1,8 +1,10 @@
 import data from "../../json/acessibilidade-web/data.json";
 import bg from "../../assets/bg/gradient_2.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
+import { LuSpeech } from "react-icons/lu";
+import web_audio from "../../assets/text-to-speech/v2/acessibilidade-web/acessibilidadeweb.mp3";
 interface Topico {
   titulo: string;
   descricao: string;
@@ -16,6 +18,7 @@ interface Diretriz {
 
 const AcessibilidadeWeb = () => {
   const [diretrizes, setDiretrizes] = useState<Diretriz[]>([]);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -25,6 +28,17 @@ const AcessibilidadeWeb = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   const isDarkTheme = theme === "dark";
   const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
@@ -42,8 +56,7 @@ const AcessibilidadeWeb = () => {
             <li>
               <Link to={"/"}>Home</Link>
             </li>
-            <li>Acessibilidade</li>
-            <li>Web</li>
+            <li>Acessibilidade Web</li>
           </ul>
         </div>
         <h1 className="font-bold text-xl">Acessibilidade Web</h1>
@@ -54,6 +67,17 @@ const AcessibilidadeWeb = () => {
           criar experiências inclusivas, garantindo que ninguém seja excluído do
           acesso a informações, serviços e funcionalidades online.
         </p>
+        <div className="mt-6">
+          <audio ref={audioRef} src={web_audio} />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="p-6 flex flex-col gap-5">

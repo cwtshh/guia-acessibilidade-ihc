@@ -5,11 +5,35 @@ import { MdFormatColorText } from "react-icons/md";
 import { FaRegKeyboard } from "react-icons/fa";
 import { FaMobileScreen } from "react-icons/fa6";
 import { IoColorPaletteOutline } from "react-icons/io5";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
+import audio1 from "../../assets/text-to-speech/v2/funcionalidades/audio1.mp3";
+import audio2 from "../../assets/text-to-speech/v2/funcionalidades/audio2.mp3";
 
 const FuncoesAcessibilidade = () => {
   const { theme } = useTheme();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioRef2 = useRef<HTMLAudioElement>(null);
+
+  const togglePlay2 = () => {
+    if (isPlaying) {
+      audioRef2.current?.pause();
+    } else {
+      audioRef2.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -43,6 +67,32 @@ const FuncoesAcessibilidade = () => {
           pessoas com diferentes tipos de deficiência interagir de forma plena
           com o conteúdo.
         </p>
+        <div className="mt-6">
+          <audio ref={audioRef} src={audio1} />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="p-6">
+        <div className="mt-6 flex items-center gap-4">
+          <audio ref={audioRef2} src={audio2} />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay2}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+          <p className="font-bold">Ouvir Todas as funcionalidades</p>
+        </div>
       </div>
 
       <div

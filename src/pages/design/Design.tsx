@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import bg from "../../assets/bg/gradient_2.jpg";
 import data from "../../json/design/data.json";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
+import { LuSpeech } from "react-icons/lu";
+import design from "../../assets/text-to-speech/v2/design/design.mp3";
 
 interface Topico {
   descricao: string;
@@ -17,6 +19,17 @@ interface Diretriz {
 const Design = () => {
   const [diretrizes, setDiretrizes] = useState<Diretriz[]>([]);
   const { theme } = useTheme();
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   useEffect(() => {
     const transformedData: Diretriz[] = Object.values(data);
@@ -56,6 +69,18 @@ const Design = () => {
           de deficiências visuais, auditivas, motoras ou cognitivas tenham
           acesso pleno à informação e aos serviços online.
         </p>
+
+        <div className="mt-6">
+          <audio ref={audioRef} src={design} />
+          <div className="tooltip" data-tip="Texto Para Fala">
+            <button
+              onClick={togglePlay}
+              className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
+            >
+              <LuSpeech className="text-2xl" />
+            </button>
+          </div>
+        </div>
       </div>
 
       <div

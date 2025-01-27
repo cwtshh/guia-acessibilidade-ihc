@@ -6,6 +6,7 @@ import Design from "./pages/design/Design";
 import Conteudo from "./pages/conteudo/Conteudo";
 import FuncoesAcessibilidade from "./pages/funcoes-acessibilidade/FuncoesAcessibilidade";
 import { themeChange } from "theme-change";
+import FerramentasAcessibilidades from "./pages/ferramentas-acessibilidade/FerramentasAcessibilidades";
 
 function App() {
   themeChange();
@@ -20,6 +21,10 @@ function App() {
         <Route
           path="/acessibilidade/funcoes"
           element={<FuncoesAcessibilidade />}
+        />
+        <Route
+          path="/acessibilidade/ferramentas"
+          element={<FerramentasAcessibilidades />}
         />
         {/* <Route path="/heuristicas" element={<Heuristicas />} />
         <Route path="/jornada-usuario" element={<JornadaUsuario />} />

@@ -65,27 +65,36 @@ const Home = () => {
 
             <button
               onClick={() => navigate("/acessibilidade/web")}
-              className="btn"
+              className="btn bg-white text-black rounded-full"
             >
               Acessibilidade na Web
             </button>
 
-            <button onClick={() => navigate("/design")} className="btn">
+            <button
+              onClick={() => navigate("/design")}
+              className="btn bg-white text-black rounded-full"
+            >
               Design
             </button>
 
-            <button onClick={() => navigate("/conteudo")} className="btn">
+            <button
+              onClick={() => navigate("/conteudo")}
+              className="btn bg-white text-black rounded-full"
+            >
               Conteúdo
             </button>
 
             <button
               onClick={() => navigate("/acessibilidade/funcoes")}
-              className="btn"
+              className="btn bg-white text-black rounded-full"
             >
               Funcionalidades de acessibilidade
             </button>
 
-            <button onClick={() => navigate("/conteudo")} className="btn">
+            <button
+              onClick={() => navigate("/acessibilidade/ferramentas")}
+              className="btn bg-white text-black rounded-full"
+            >
               Ferramentas de acessibilidade
             </button>
           </div>
