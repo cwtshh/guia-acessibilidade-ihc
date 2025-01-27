@@ -1,7 +1,7 @@
 import bg from "../../assets/bg/gradient_2.jpg";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LuSpeech } from "react-icons/lu";
 import audio1 from "../../assets/text-to-speech/v2/ferramentas/audio1.mp3";
 import { FaLink } from "react-icons/fa";
@@ -23,6 +23,11 @@ const FerramentasAcessibilidades = () => {
   const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
   const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
   const cardHeaderColor = isDarkTheme ? "bg-primary-800" : "bg-primary-800";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <div

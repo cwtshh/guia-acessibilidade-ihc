@@ -51,6 +51,10 @@ const CheckListAcessibilidade = () => {
     setConteudo(data_conteudo);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const isDarkTheme = theme === "dark";
   const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
   const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
