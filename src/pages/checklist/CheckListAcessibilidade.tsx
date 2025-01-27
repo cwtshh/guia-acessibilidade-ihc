@@ -87,7 +87,7 @@ const CheckListAcessibilidade = () => {
                 </h1>
               </div>
               <div className="overflow-x-auto">
-                <table className="table table-zebra">
+                <table className="table">
                   <thead>
                     <tr>
                       <th className="p-2">Tópico</th>
@@ -123,7 +123,7 @@ const CheckListAcessibilidade = () => {
                 </h1>
               </div>
               <div className="overflow-x-auto">
-                <table className="table table-zebra">
+                <table className="table">
                   <thead>
                     <tr>
                       <th className="p-2">Descrição</th>
@@ -149,7 +149,7 @@ const CheckListAcessibilidade = () => {
         })}
         <h1 className="font-bold text-xl">Conteúdo</h1>
         <div className="overflow-x-auto">
-          <table className="table table-zebra">
+          <table className="table">
             <thead>
               <tr>
                 <th className="p-2">Descrição</th>
