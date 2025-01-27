@@ -122,13 +122,13 @@ const NavBar = () => {
           </li>
           <li
             className={`${
-              location.pathname === "/Design"
+              location.pathname === "/design"
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                 : "transition-all duration-300 ease-in-out"
             }`}
           >
             <Link
-              to={"/Design"}
+              to={"/design"}
               className="transition-colors duration-300 hover:text-primary-600"
             >
               Design
