@@ -137,7 +137,7 @@ const AcessibilidadeWeb = () => {
       <div
         className={`${
           theme === "dark" ? "text-white" : "text-black"
-        } bg-base-200 p-6 overflow-auto`}
+        } bg-base-200 p-6 overflow-hidden`}
       >
         <h1 className="font-bold text-xl">Fontes</h1>
         <div className={" flex flex-col gap-4"}>

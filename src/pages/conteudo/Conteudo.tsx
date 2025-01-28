@@ -107,7 +107,7 @@ const Conteudo = () => {
         })}
       </div>
 
-      <div className="p-6 bg-base-200">
+      <div className="p-6 bg-base-200 overflow-hidden">
         <h1
           className={`font-bold text-xl ${
             theme === "dark" ? "text-white" : "text-black"
@@ -115,7 +115,7 @@ const Conteudo = () => {
         >
           Fontes
         </h1>
-        <div className="flex flex-col gap-4 overflow-auto">
+        <div className="flex flex-col gap-4">
           <p>
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text
             Content (Level A), Available at:{" "}
