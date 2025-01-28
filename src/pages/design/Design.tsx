@@ -131,7 +131,7 @@ const Design = () => {
       </div>
       <div className="bg-base-200 p-6">
         <h1 className="font-bold text-xl">Fontes</h1>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 overflow-auto">
           <p>
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text
             Content (Level A), Disponível em:
