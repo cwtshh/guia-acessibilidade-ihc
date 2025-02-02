@@ -36,7 +36,7 @@ const NavBar = () => {
   };
 
   const NomePaginaMap: { [key: string]: string } = {
-    "/": "Guia de Acessibilidade - IHC",
+    "/": "Acessify",
     // "/wcag": "WCAG",
     // "/abnt": "ABNT",
     // "/heuristicas": "Heurísticas de Nielsen",
@@ -68,7 +68,7 @@ const NavBar = () => {
             theme === "dark" ? "text-white" : "text-black"
           }`}
         >
-          <span className="hidden sm:block">Guia de Acessibilidade - IHC</span>
+          <span className="hidden sm:block">Acessify</span>
           <span className="block sm:hidden">
             {NomePaginaMap[location.pathname as keyof typeof NomePaginaMap]}
           </span>
@@ -104,18 +104,14 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1 space-x-4">
           <li
             className={`${
-              location.pathname === "/wcag"
+              location.pathname === "/acessibilidade/web"
                 ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
                 : "transition-all duration-300 ease-in-out"
             }`}
           >
             <Link
               to={"/acessibilidade/web"}
-              className={`${
-                location.pathname === "/acessibilidade/web"
-                  ? "bg-primary-600 text-white rounded-full transition-all duration-300 ease-in-out"
-                  : "transition-all duration-300 ease-in-out"
-              }`}
+              className="transition-colors duration-300 hover:text-primary-600"
             >
               Acessibilidade na Web
             </Link>

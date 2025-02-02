@@ -19,17 +19,16 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState("cupcake");
+  // Verifica o tema persistido no localStorage ou usa "cupcake" como padrão
+  const [theme, setTheme] = useState<string>(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme : "cupcake"; // Se não houver tema salvo, usa "cupcake"
+  });
 
   const handleThemeChange = () => {
-    const currentTheme = localStorage.getItem("theme") || "cupcake";
-    if (currentTheme === "cupcake") {
-      localStorage.setItem("theme", "dark");
-      setTheme("dark");
-    } else {
-      localStorage.setItem("theme", "cupcake");
-      setTheme("cupcake");
-    }
+    const newTheme = theme === "cupcake" ? "dark" : "cupcake";
+    localStorage.setItem("theme", newTheme);
+    setTheme(newTheme);
   };
 
   useEffect(() => {

@@ -25,7 +25,7 @@ const Home = () => {
             </ul>
           </div>
           <h1 className="font-bold text-xl sm:text-2xl">
-            Seja bem-vindo ao Guia de Acessibilidade do Grupo 9!
+            Seja bem-vindo ao Acessify!
           </h1>
           <div className="text-justify text-lg sm:text-base md:text-lg lg:text-xl">
             <p>
