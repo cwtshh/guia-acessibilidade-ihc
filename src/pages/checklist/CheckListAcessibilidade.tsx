@@ -44,6 +44,7 @@ const CheckListAcessibilidade = () => {
     Object.values(data_design)
   );
   const [conteudo, setConteudo] = useState<C_Diretriz>(data_conteudo);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     setChecklist(data);
@@ -59,13 +60,32 @@ const CheckListAcessibilidade = () => {
   const bgColor = isDarkTheme ? "bg-gray-800" : "bg-white";
   const textColor = isDarkTheme ? "text-gray-200" : "text-gray-800";
 
+  const total = () => {
+    let total = 0;
+    checklist.forEach((diretriz) => {
+      total += diretriz.topicos.length;
+    });
+    design.forEach((diretriz) => {
+      total += diretriz.topicos.length;
+    });
+    total += conteudo.topicos.length;
+    return total;
+  };
+
+  // Função para atualizar a pontuação
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
+      setScore((prevScore) => prevScore + 1);
+    } else {
+      setScore((prevScore) => prevScore - 1);
+    }
+  };
+
   return (
     <div>
       <div
         className={`text-white p-6`}
-        style={{
-          backgroundImage: `url(${bg})`,
-        }}
+        style={{ backgroundImage: `url(${bg})` }}
       >
         <div className="breadcrumbs text-sm">
           <ul>
@@ -74,7 +94,6 @@ const CheckListAcessibilidade = () => {
             </li>
             <li>CheckList de Acessibilidade</li>
           </ul>
-          table-zebra"
         </div>
         <h1 className="font-bold text-xl">CheckList de Acessibilidade</h1>
         <p className="text-justify">
@@ -86,98 +105,88 @@ const CheckListAcessibilidade = () => {
       </div>
 
       <div className="flex flex-col p-6 gap-4">
+        <h1 className="font-bold text-xl">
+          Pontuação Total: {score} / {total()}
+        </h1>
+
         <h1 className="font-bold text-xl">Acessibilidade Web</h1>
-        {checklist.map((diretriz) => {
-          return (
-            <div
-              className={`${
-                isDarkTheme ? `${bgColor}` : `bg-white`
-              } rounded-lg p-4 mb-4`}
-            >
-              <div className="bg-primary-800 text-white rounded-lg p-4">
-                <h1 className="font-bold">
-                  {diretriz.categoria.toUpperCase()}
-                </h1>
-              </div>
-              <div className="overflow-x-auto">
-                <table
-                  className={`table ${
-                    isDarkTheme ? `${bgColor} ${textColor}` : ``
-                  }`}
-                >
-                  <thead>
-                    <tr>
-                      <th className="p-2">Tópico</th>
-                      <th className="p-2">Descrição</th>
-                      <th className="p-2">Funcionalidade Atendida</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {diretriz.topicos.map((topico) => {
-                      return (
-                        <tr>
-                          <td className="p-2">{topico.titulo}</td>
-                          <td className="p-2">{topico.descricao}</td>
-                          <td className="p-2">
-                            <input type="checkbox" className="checkbox" />
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
+        {checklist.map((diretriz, index) => (
+          <div key={index} className={`${bgColor} rounded-lg p-4 mb-4`}>
+            <div className="bg-primary-800 text-white rounded-lg p-4">
+              <h1 className="font-bold">{diretriz.categoria.toUpperCase()}</h1>
             </div>
-          );
-        })}
+            <div className="overflow-x-auto">
+              <table
+                className={`table ${
+                  isDarkTheme ? `${bgColor} ${textColor}` : ``
+                }`}
+              >
+                <thead>
+                  <tr>
+                    <th className="p-2">Tópico</th>
+                    <th className="p-2">Descrição</th>
+                    <th className="p-2">Funcionalidade Atendida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {diretriz.topicos.map((topico, i) => (
+                    <tr key={i}>
+                      <td className="p-2">{topico.titulo}</td>
+                      <td className="p-2">{topico.descricao}</td>
+                      <td className="p-2">
+                        <input
+                          type="checkbox"
+                          className="checkbox"
+                          onChange={handleCheckboxChange}
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
+
         <h1 className="font-bold text-xl">Design</h1>
-        {design.map((diretriz) => {
-          return (
-            <div
-              className={`${
-                isDarkTheme ? `${bgColor}` : `bg-white`
-              } rounded-lg p-4 mb-4`}
-            >
-              <div className="bg-primary-800 text-white rounded-lg p-4">
-                <h1 className="font-bold">
-                  {diretriz.categoria.toUpperCase()}
-                </h1>
-              </div>
-              <div className="overflow-x-auto">
-                <table
-                  className={`table ${
-                    isDarkTheme ? `${bgColor} ${textColor}` : ``
-                  }`}
-                >
-                  <thead>
-                    <tr>
-                      <th className="p-2">Descrição</th>
-                      <th className="p-2">Funcionalidade Atendida</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {diretriz.topicos.map((topico) => {
-                      return (
-                        <tr>
-                          <td className="p-2">{topico.descricao}</td>
-                          <td className="p-2">
-                            <input type="checkbox" className="checkbox" />
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
+        {design.map((diretriz, index) => (
+          <div key={index} className={`${bgColor} rounded-lg p-4 mb-4`}>
+            <div className="bg-primary-800 text-white rounded-lg p-4">
+              <h1 className="font-bold">{diretriz.categoria.toUpperCase()}</h1>
             </div>
-          );
-        })}
+            <div className="overflow-x-auto">
+              <table
+                className={`table ${
+                  isDarkTheme ? `${bgColor} ${textColor}` : ``
+                }`}
+              >
+                <thead>
+                  <tr>
+                    <th className="p-2">Descrição</th>
+                    <th className="p-2">Funcionalidade Atendida</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {diretriz.topicos.map((topico, i) => (
+                    <tr key={i}>
+                      <td className="p-2">{topico.descricao}</td>
+                      <td className="p-2">
+                        <input
+                          type="checkbox"
+                          className="checkbox"
+                          onChange={handleCheckboxChange}
+                        />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
+
         <h1 className="font-bold text-xl">Conteúdo</h1>
-        <div
-          className={`${
-            isDarkTheme ? `${bgColor}` : `bg-white`
-          } rounded-lg p-4 mb-4`}
-        >
+        <div className={`${bgColor} rounded-lg p-4 mb-4`}>
           <div className="overflow-x-auto">
             <table
               className={`table ${
@@ -191,20 +200,25 @@ const CheckListAcessibilidade = () => {
                 </tr>
               </thead>
               <tbody>
-                {conteudo.topicos.map((topico) => {
-                  return (
-                    <tr>
-                      <td className="p-2">{topico.descricao}</td>
-                      <td className="p-2">
-                        <input type="checkbox" className="checkbox" />
-                      </td>
-                    </tr>
-                  );
-                })}
+                {conteudo.topicos.map((topico, i) => (
+                  <tr key={i}>
+                    <td className="p-2">{topico.descricao}</td>
+                    <td className="p-2">
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        onChange={handleCheckboxChange}
+                      />
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
+        <button className="btn bg-primary-800 text-white">
+          Voltar ao Topo
+        </button>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import { LuSpeech } from "react-icons/lu";
 import design from "../../assets/text-to-speech/v2/design/design.mp3";
+import { IoSearch } from "react-icons/io5";
 
 interface Topico {
   descricao: string;
@@ -21,6 +22,22 @@ const Design = () => {
   const { theme } = useTheme();
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const filteredDiretrizes = diretrizes
+    .filter((diretriz) =>
+      selectedCategory ? diretriz.categoria === selectedCategory : true
+    )
+    .map((diretriz) => ({
+      ...diretriz,
+      topicos: diretriz.topicos.filter(
+        (topico) =>
+          topico.descricao.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          diretriz.categoria.toLowerCase().includes(searchTerm.toLowerCase())
+      ),
+    }))
+    .filter((diretriz) => diretriz.topicos.length > 0);
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -88,7 +105,39 @@ const Design = () => {
           theme === "dark" ? "text-white" : "text-black"
         }`}
       >
-        {diretrizes.map((diretriz) => {
+        <div className="w-full">
+          <label className="input input-bordered flex items-center gap-2">
+            <input
+              type="text"
+              className="grow"
+              placeholder="Pesquisar..."
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <IoSearch />
+          </label>
+          <label className="form-control w-full max-w-xs">
+            <div className="label font-bold">
+              <span className="label-text">Categoria</span>
+            </div>
+            <select
+              className="select select-bordered"
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option disabled selected>
+                Selecionar
+              </option>
+              <option value="">Todas as categorias</option>
+              {[...new Set(diretrizes.map((d) => d.categoria))].map(
+                (categoria) => (
+                  <option key={categoria} value={categoria}>
+                    {categoria}
+                  </option>
+                )
+              )}
+            </select>
+          </label>
+        </div>
+        {filteredDiretrizes.map((diretriz) => {
           return (
             <div key={diretriz.categoria}>
               <h1 className="font-bold text-xl">
