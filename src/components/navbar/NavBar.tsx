@@ -47,7 +47,7 @@ const NavBar = () => {
     // "/abnt/tabela/c4": "Tabela C.4 - Regiões",
     // "/abnt/tabela/c5": "Tabela C.5 - Listas",
     // "/abnt/tabela/c6": "Tabela C.6 - Tabelas",
-    "/acessibilidade/web": "Acessibilidade na Web",
+    "/acessibilidade/web": "Acessibilidade na Digital",
     "/design": "Design",
     "/conteudo": "Conteúdo",
     "/acessibilidade/funcoes": "Funções de acessibilidade",
@@ -113,7 +113,7 @@ const NavBar = () => {
               to={"/acessibilidade/web"}
               className="transition-colors duration-300 hover:text-primary-600"
             >
-              Acessibilidade na Web
+              Acessibilidade na Digital
             </Link>
           </li>
           <li
@@ -298,7 +298,7 @@ const NavBar = () => {
                   onClick={closeMenu}
                   className="text-lg font-medium transition-colors duration-300 hover:text-primary-600"
                 >
-                  Acessibilidade na Web
+                  Acessibilidade Digital
                 </Link>
               </li>
               <li

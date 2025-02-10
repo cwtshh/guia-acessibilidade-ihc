@@ -73,10 +73,10 @@ const AcessibilidadeWeb = () => {
             <li>
               <Link to={"/"}>Home</Link>
             </li>
-            <li>Acessibilidade Web</li>
+            <li>Acessibilidade Digital</li>
           </ul>
         </div>
-        <h1 className="font-bold text-xl">Acessibilidade Web</h1>
+        <h1 className="font-bold text-xl">Acessibilidade Digital</h1>
         <p>
           Acessibilidade digital é o princípio de projetar e desenvolver
           conteúdos e interfaces que possam ser utilizados por todas as pessoas,

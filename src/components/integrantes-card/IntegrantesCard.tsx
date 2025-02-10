@@ -30,6 +30,7 @@ const IntegrantesCard = ({ integrante }: IntegrantesCardProps) => {
             href={integrante.github_link}
             target="_blank"
             rel="noreferrer"
+            aria-label={`Perfil do Github de ${integrante.name}`}
           >
             <FaGithub className="text-xl sm:text-2xl" />
           </a>
