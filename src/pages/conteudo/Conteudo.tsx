@@ -74,6 +74,7 @@ const Conteudo = () => {
           <audio ref={audioRef} src={conteudo} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Acessibilidade de Conteúdo"
               onClick={togglePlay}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >
@@ -120,7 +121,7 @@ const Conteudo = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text
             Content (Level A), Available at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html
@@ -131,7 +132,7 @@ const Conteudo = () => {
             WCAG 2.1 Understanding Docs, SC 1.3.1: Info and Relationships,
             Available at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/meaning-in-context.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/meaning-in-context.html
@@ -142,7 +143,7 @@ const Conteudo = () => {
             WCAG 2.1 Understanding Docs, SC 1.4.3: Contrast (Minimum), Available
             at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
@@ -152,7 +153,7 @@ const Conteudo = () => {
           <p>
             WCAG 2.1 Understanding Docs, SC 1.4.5: Text Resize, Available at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/text-resizing.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/text-resizing.html
@@ -162,7 +163,7 @@ const Conteudo = () => {
           <p>
             WCAG 2.1 Understanding Docs, SC 2.4.7: Focus Visible, Available at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
@@ -173,7 +174,7 @@ const Conteudo = () => {
             WCAG 2.1 Understanding Docs, SC 3.2.2: On Input (Changes of
             Context), Available at:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/on-input.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/on-input.html

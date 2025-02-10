@@ -71,6 +71,7 @@ const FuncoesAcessibilidade = () => {
           <audio ref={audioRef} src={audio1} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Funcionalidades de Acessibilidade"
               onClick={togglePlay}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >
@@ -85,6 +86,7 @@ const FuncoesAcessibilidade = () => {
           <audio ref={audioRef2} src={audio2} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Funcionalidades de Acessibilidade - Ouvir funcionalidades"
               onClick={togglePlay2}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >

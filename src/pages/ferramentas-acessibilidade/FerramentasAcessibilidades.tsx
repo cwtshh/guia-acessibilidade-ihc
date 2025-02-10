@@ -56,6 +56,7 @@ const FerramentasAcessibilidades = () => {
           <audio ref={audioRef} src={audio1} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Ferramentas de Acessibilidade"
               onClick={togglePlay}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >
@@ -77,7 +78,10 @@ const FerramentasAcessibilidades = () => {
             <h2 className="font-bold text-xl">
               Wave - Web Accessibility Evaluation Tool
             </h2>
-            <a href="https://wave.webaim.org/">
+            <a
+              aria-label="Wave - Web Accessibility Evaluation Tool"
+              href="https://wave.webaim.org/"
+            >
               <FaLink />
             </a>
           </div>
@@ -97,7 +101,7 @@ const FerramentasAcessibilidades = () => {
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
             <h2 className="font-bold text-xl">Axe</h2>
-            <a href="https://www.deque.com/axe/">
+            <a aria-label="Link para Axe" href="https://www.deque.com/axe/">
               <FaLink />
             </a>
           </div>
@@ -120,7 +124,10 @@ const FerramentasAcessibilidades = () => {
             <h2 className="font-bold text-xl">
               NVDA (NonVisual Desktop Access)
             </h2>
-            <a href="https://www.nvaccess.org/">
+            <a
+              aria-label="Link para NVDA (NonVisual Desktop Access)"
+              href="https://www.nvaccess.org/"
+            >
               <FaLink />
             </a>
           </div>
@@ -140,7 +147,10 @@ const FerramentasAcessibilidades = () => {
             className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
           >
             <h2 className="font-bold text-xl">Lighthouse - Google</h2>
-            <a href="https://pagespeed.web.dev/">
+            <a
+              aria-label="Link para Lighthouse - Google"
+              href="https://pagespeed.web.dev/"
+            >
               <FaLink />
             </a>
           </div>
@@ -173,7 +183,10 @@ const FerramentasAcessibilidades = () => {
               className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
             >
               <h2 className="font-bold text-xl">React A11y</h2>
-              <a href="https://github.com/reactjs/react-a11y">
+              <a
+                aria-label="Link para React A11y"
+                href="https://github.com/reactjs/react-a11y"
+              >
                 <FaLink />
               </a>
             </div>
@@ -193,7 +206,10 @@ const FerramentasAcessibilidades = () => {
               className={`${cardHeaderColor} text-white p-4 rounded-t-lg w-full flex flex-col gap-5`}
             >
               <h2 className="font-bold text-xl">React-aria</h2>
-              <a href="https://react-spectrum.adobe.com/react-aria/index.html">
+              <a
+                aria-label="Link para React-aria"
+                href="https://react-spectrum.adobe.com/react-aria/index.html"
+              >
                 <FaLink />
               </a>
             </div>

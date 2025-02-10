@@ -88,6 +88,7 @@ const AcessibilidadeWeb = () => {
           <audio ref={audioRef} src={web_audio} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Acessibilidade Digital"
               onClick={togglePlay}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >
@@ -194,7 +195,7 @@ const AcessibilidadeWeb = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text
             Content (Level A), Disponível em:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html
@@ -204,7 +205,7 @@ const AcessibilidadeWeb = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.4.5: Images of Text
             (Level AA), Disponível em:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html
@@ -214,7 +215,7 @@ const AcessibilidadeWeb = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 4.1.2: Name, Role,
             Value (Level A), Disponível em:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
@@ -224,7 +225,7 @@ const AcessibilidadeWeb = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.2.2: Captions
             (Prerecorded) (Level A), Disponível em:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/captions.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/captions.html
@@ -234,7 +235,7 @@ const AcessibilidadeWeb = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.2.3: Audio
             Description or Media Alternative (Level A), Disponível em:{" "}
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/audio-description.html

@@ -91,6 +91,7 @@ const Design = () => {
           <audio ref={audioRef} src={design} />
           <div className="tooltip" data-tip="Texto Para Fala">
             <button
+              aria-label="Texto Para Fala - Design"
               onClick={togglePlay}
               className="bg-primary-800 p-4 rounded-3xl text-white hover:bg-primary-600 transition-all"
             >
@@ -185,7 +186,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.1.1: Non-text
             Content (Level A), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html
@@ -196,7 +197,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.4.3: Contrast
             (Minimum) (Level AA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
@@ -207,7 +208,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 1.4.6: Contrast
             (Enhanced) (Level AAA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html
@@ -218,7 +219,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 2.1.1: Keyboard (Level
             A), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html
@@ -229,7 +230,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 2.4.7: Focus Visible
             (Level AA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html
@@ -240,7 +241,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 3.1.1: Language of
             Page (Level A), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html
@@ -251,7 +252,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 3.2.3: Consistent
             Navigation (Level AA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html
@@ -262,7 +263,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 3.3.3: Error
             Suggestion (Level AA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html
@@ -273,7 +274,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 4.1.2: Name, Role,
             Value (Level A), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html
@@ -284,7 +285,7 @@ const Design = () => {
             WCAG 2.1 Understanding Docs, Understanding SC 4.1.3: Status Messages
             (Level AA), Disponível em:
             <a
-              className="text-primary-500"
+              className="text-primary-800"
               href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html"
             >
               https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html
