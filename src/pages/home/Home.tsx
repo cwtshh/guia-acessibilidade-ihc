@@ -4,9 +4,15 @@ import chars from "../../assets/char/—Pngtree—we are hiring character illust
 import { Link, useNavigate } from "react-router-dom";
 import bg from "../../assets/bg/gradient_2.jpg";
 import { FaHome } from "react-icons/fa";
+import { useState } from "react";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [showMore, setShowMore] = useState<boolean>(false);
   return (
     <div className="flex flex-col gap-5">
       <div
@@ -27,7 +33,12 @@ const Home = () => {
           <h1 className="font-bold text-xl sm:text-2xl">
             Seja bem-vindo ao Acessify!
           </h1>
-          <div className="text-justify text-lg sm:text-base md:text-lg lg:text-xl">
+          {/* Conteúdo colapsável */}
+          <div
+            className={`overflow-hidden transition-all duration-500 ${
+              showMore ? "max-h-[500px]" : "max-h-[100px]"
+            }`}
+          >
             <p>
               Estamos entusiasmados em tê-lo conosco nesta jornada de
               aprendizado, onde a acessibilidade será colocada como um princípio
@@ -46,23 +57,26 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* <button onClick={() => navigate("/wcag")} className="btn">
-              WCAG
-            </button>
-            <button onClick={() => navigate("/abnt")} className="btn">
-              ABNT
-            </button>
-            <button onClick={() => navigate("/heuristicas")} className="btn">
-              Heurísticas de Nielsen
-            </button>
-            <button
-              onClick={() => navigate("/acessibilidade-digital")}
-              className="btn"
-            >
-              Guia de Boas Práticas para Acessibilidade Digital
-            </button> */}
+          <div
+            role="button"
+            aria-label="Ver Mais - Clique Para exibir o conteúdo de forma completa"
+            onClick={() => setShowMore(!showMore)}
+            className="flex items-center gap-2 justify-center underline sm:hidden transition-opacity duration-300 hover:opacity-80"
+          >
+            {showMore ? (
+              <>
+                <MdOutlineKeyboardArrowUp />
+                Ver Menos
+              </>
+            ) : (
+              <>
+                <MdOutlineKeyboardArrowDown />
+                Ver Mais
+              </>
+            )}
+          </div>
 
+          <div className="flex flex-col sm:flex-row gap-4">
             <button
               aria-label="Acessibilidade na Digital"
               onClick={() => navigate("/acessibilidade/web")}
